@@ -113,8 +113,12 @@ print("Dictionary from Comprehension v2: ", dict_comprehension_v2)
 # flattened_data = [str(val).upper() for block in matrix if block.is_active for row in block.rows if sum(row) > 10 for val in row if val != 0]
 
 # Easy
+matrix_v2 = [
+    [[5, 6, 7, 8]],
+    [[0, 0]]
+]
 flattened_data_simple = []
-for block in matrix:
+for block in matrix_v2:
     for row in block:
         if sum(row) > 10:
             for val in row:
@@ -124,3 +128,60 @@ for block in matrix:
 
 # print("Flattened Data: ", flattened_data)
 print("Flattened Data Simple: ", flattened_data_simple)
+
+#------------------------------
+# Task 2: Custom exception:
+# Link youtube: https://www.youtube.com/watch?v=CK0wc85inxk&t=100s
+# Link Website: https://realpython.com/python-exceptions/#creating-custom-exceptions-in-python
+
+'''class InsufficientFundsError(Exception):
+    pass
+
+def withdraw(balance, amount):
+    if amount > balance:
+                raise InsufficientFundsError(
+            f"Insufficient funds: balance is ${balance}, attempted withdrawal is ${amount}."
+        )
+
+    return balance - amount
+
+try: 
+    new_balance = withdraw(100, 150)
+    print(f"Withdrawal successful. New balance: {new_balance}")
+except InsufficientFundsError as e:
+    print(e)
+'''
+
+class InsufficientFundsError(Exception):
+    def __init__(self, balance, amount):
+        self.balance = balance
+        self.amount = amount
+        super().__init__(f"Insufficient funds: balance is Rs{balance}, attempted withdrawal is Rs{amount}.")
+
+def withdraw(balance, amount):
+    if amount> balance:
+        raise InsufficientFundsError(balance, amount)
+    return balance - amount
+
+balance = 1000
+amount = 10000
+try:
+    withdraw(balance, amount)
+except InsufficientFundsError as e:
+    print(f"Warning: {e}")
+
+# More Example
+
+class VowelsError(Exception):
+    pass
+
+def check_vowels(input_string):
+    vowels = "aeiouAEIOU"
+    for char in input_string:
+        if char in vowels:
+            raise VowelsError(f"Vowel '{char}' found in the input string.")
+
+try:
+    check_vowels("Hello")
+except VowelsError as e:
+    print(e)
