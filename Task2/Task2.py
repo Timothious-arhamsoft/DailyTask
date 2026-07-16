@@ -25,11 +25,15 @@ def file_read(file_path):
         with open(file_path, 'r') as file:
             content = file.read()
             print(content)
+            # Ilterative method to read file line by line and consume less RAM for large Files
+            # for line in file:
+            #     print(line.strip())
     except FileNotFoundError:
         print("File not found. Please check the file path.")
 
 file_read("Task2/file.txt")
 #------------------------------------------
 #---------16-July-2026
+
 
 
