@@ -20,6 +20,8 @@ def bare_except(value):
 
 bare_except(5)
 
+# C -> file-read fix
+
 def file_read(file_path):
     try:
         with open(file_path, 'r') as file:
@@ -99,8 +101,26 @@ if (len(keys) == len(values)):
 
 # Dict Comprehension 
 dict_comprehension = {keys[i]: values[i] for i in range (len(keys))}
+dict_comprehension_v2 = {keys:values for keys, values in zip(keys, values)}
 print("Dictionary from Comprehension: ", dict_comprehension)
+print("Dictionary from Comprehension v2: ", dict_comprehension_v2)
 
 
+# ----------Complex List Comprehension
+# As its impossible to debug or scan quickly.
+# As Below we have Wrror: AttributeError: 'list' object has no attribute 'is_active'   
+
+# flattened_data = [str(val).upper() for block in matrix if block.is_active for row in block.rows if sum(row) > 10 for val in row if val != 0]
+
+# Easy
+flattened_data_simple = []
+for block in matrix:
+    for row in block:
+        if sum(row) > 10:
+            for val in row:
+                if val != 0:
+                    flattened_data_simple.append(str(val).upper())
 
 
+# print("Flattened Data: ", flattened_data)
+print("Flattened Data Simple: ", flattened_data_simple)
