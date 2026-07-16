@@ -206,9 +206,9 @@ class TimerContextManager:
         self.elapsed_time = self.end_time - self.start_time
         print(f"Elapsed time: {self.elapsed_time} seconds")
 
-with TimerContextManager() as timer:
-    time.sleep(2)
-    raise ValueError("An error occurred during the Elapsed Time.")
+# with TimerContextManager() as timer:
+#     time.sleep(2)
+
 
 # Method 2: Decorator (@contextmanager)
 @contextmanager
@@ -224,5 +224,15 @@ def timer_context_manager():
         end_time = time.time()
         elapsed_time = end_time - start_time
         print(f"Elapsed time: {elapsed_time} seconds")
-with timer_context_manager():
-    time.sleep(2)
+# with timer_context_manager():
+#     time.sleep(2)
+
+
+# Task 5: Breake Points
+
+def calculate_sum(a,b):
+    final = a+b
+    # breakpoint() 
+    return final
+
+print(calculate_sum(5, 10))
