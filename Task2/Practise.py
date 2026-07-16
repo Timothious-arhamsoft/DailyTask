@@ -70,6 +70,19 @@ print(singleton)  # Output: ('hello',)
 singleton = singleton + ('bye',)  # <-- note trailing comma
 print(singleton)  # Output: ('hello', 'bye')
 
+# ----------Sets
+# -> A set is an unordered collection with no duplicate elements. 
+# Basic uses include membership testing and eliminating duplicate entries. 
+# -> Set objects also support mathematical operations like union, intersection, difference, and symmetric difference.
+# -> Set objects are mutable, but the elements contained in a set must be immutable.
 
-# ----------Dictionary Comprehension
+basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(type(basket))  # Output: <class 'set'>
+print(basket)  # Output: {'orange', 'banana', 'pear', 'apple'}
+
+'apple' in basket  # Output: True
+'crabgrass' in basket  # Output: False
+a = set('abracadabra')
+print(a)
+
 
