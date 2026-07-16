@@ -86,5 +86,19 @@ a = set('abracadabra')
 print(a)
 
 
+#-----------Context Manager
 
+class Hellocontextmanager:
+    def __enter__(self):
+        print("Entering the context.")
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        print("Leaving the context...")
+        print(f"{exc_type  = }")
+        print(f"{exc_value = }")
+        print(f"{traceback    = }")
+
+with Hellocontextmanager() as hello:
+    print(hello)
 

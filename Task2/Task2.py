@@ -1,4 +1,4 @@
-# Tomorrows Redo Task
+# Task 1: Tomorrows Redo Task
 
 # A -> cache-bug fix 
 def cache_bug(item, items=None):
@@ -37,7 +37,7 @@ file_read("Task2/file.txt")
 #------------------------------------------
 #---------16-July-2026
 
-# Task 1: Comprehension refactor
+# Task 2: Comprehension refactor
 #---List Cmprehension
 import random
 
@@ -130,10 +130,11 @@ for block in matrix_v2:
 print("Flattened Data Simple: ", flattened_data_simple)
 
 #------------------------------
-# Task 2: Custom exception:
+# Task 3: Custom exception:
 # Link youtube: https://www.youtube.com/watch?v=CK0wc85inxk&t=100s
 # Link Website: https://realpython.com/python-exceptions/#creating-custom-exceptions-in-python
 
+#--> Method 1:
 '''class InsufficientFundsError(Exception):
     pass
 
@@ -152,6 +153,7 @@ except InsufficientFundsError as e:
     print(e)
 '''
 
+#--> Method 2:
 class InsufficientFundsError(Exception):
     def __init__(self, balance, amount):
         self.balance = balance
@@ -185,3 +187,42 @@ try:
     check_vowels("Hello")
 except VowelsError as e:
     print(e)
+
+
+#------------------------------
+# Task 4: Context manager:
+
+import time
+from contextlib import contextmanager
+
+#Method 1: Using Class (Enter and Exit Methods)
+class TimerContextManager:
+    def __enter__(self):
+        self.start_time = time.time()
+        return self
+
+    def __exit__(self, exc_type, exc_value, traceback):
+        self.end_time = time.time()
+        self.elapsed_time = self.end_time - self.start_time
+        print(f"Elapsed time: {self.elapsed_time} seconds")
+
+with TimerContextManager() as timer:
+    time.sleep(2)
+    raise ValueError("An error occurred during the Elapsed Time.")
+
+# Method 2: Decorator (@contextmanager)
+@contextmanager
+
+def timer_context_manager():
+    start_time = time.time()
+    try:
+        yield
+    except Exception as e:
+        print(f"An error occurred Inside: {e}")
+        
+    finally:
+        end_time = time.time()
+        elapsed_time = end_time - start_time
+        print(f"Elapsed time: {elapsed_time} seconds")
+with timer_context_manager():
+    time.sleep(2)
