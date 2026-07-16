@@ -54,6 +54,8 @@ queue = deque([1,2,3])
 
 queue.append(4)  # Enqueue
 print(queue)  # Output: deque([1, 2, 3, 4])
+queue.popleft()  # Dequeue
+print(queue)  # Output: deque([2, 3, 4])
 
 #--Tuples and Sequences
 # Tuple are immutable sequences, typically used to store collections of heterogeneous data. Tuples are defined by enclosing the elements in parentheses ().
