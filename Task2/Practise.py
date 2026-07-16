@@ -48,3 +48,28 @@ copied_list.append(9)  # Modify the copied list
 print(unodered_list)  # Output: [8, 7, 6, 5, 4, 2, 1, 0]
 print(copied_list)  # Output: [8, 7, 6, 5, 4, 2, 1, 0, 9]
 
+# -----------List as Queue
+from collections import deque
+queue = deque([1,2,3])
+
+queue.append(4)  # Enqueue
+print(queue)  # Output: deque([1, 2, 3, 4])
+
+#--Tuples and Sequences
+# Tuple are immutable sequences, typically used to store collections of heterogeneous data. Tuples are defined by enclosing the elements in parentheses ().
+t = 12345, 54321, 'hello!'
+print(t[0])
+print(t)
+u = t, (1, 2, 3, 4, 5)
+print(u)
+
+empty = ()
+singleton = 'hello',  # <-- note trailing comma
+print(singleton)  # Output: ('hello',)
+
+singleton = singleton + ('bye',)  # <-- note trailing comma
+print(singleton)  # Output: ('hello', 'bye')
+
+
+# ----------Dictionary Comprehension
+
