@@ -87,7 +87,8 @@ greet()
 print(greet.__name__)
 print(greet.__doc__)
 
-# --- Task 5 Enumerate and Zip
+# --- Task 5 
+#----------Enumerate and Zip
 
 planets_lst = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
 for key,name in enumerate(planets_lst):
@@ -98,4 +99,5 @@ example_indes = [1,2,3]
 
 for index,val in zip(example_indes, example_zip):
     print(index,val)
+# --- Task 6
 
