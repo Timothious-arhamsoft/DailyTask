@@ -40,7 +40,7 @@ for value in gen_lst:
 
 #--Simple
 import time
-import functools
+from functools import lru_cache, wraps
 def simple_timer():
     time.sleep(2)
     print("Finished")
@@ -69,7 +69,7 @@ print(test.__doc__)
 
 def time_deco_v2(func):
 
-    @functools.wraps(func)
+    wraps(func)
     def inside(*args, **kwargs):
         start_time = time.time()
         result = func(*args, **kwargs)
@@ -102,7 +102,7 @@ for index,val in zip(example_indes, example_zip):
 
 # --- Task 6
 # ---Correct Caching with lru_cache
-from functools import lru_cache
+
 
 @lru_cache(maxsize=None)
 def fibonacci(n):
