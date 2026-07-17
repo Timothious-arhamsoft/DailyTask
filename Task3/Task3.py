@@ -34,3 +34,58 @@ gen_lst = list_generator([1, 2, 3, 4])
 print(gen_lst)
 for value in gen_lst:
     print(value)
+
+#---Task 3
+# ------ @timer Decorator
+
+#--Simple
+import time
+import functools
+def simple_timer():
+    time.sleep(2)
+    print("Finished")
+
+# Decorator
+
+def time_deco(func):   
+    def inside():
+        start_time = time.time()
+        print("Start: ", start_time)
+        func()
+        end_time = time.time()
+        print("Function Name: ",func.__name__)
+        print("Function Finished: ", end_time - start_time )
+    return inside
+@time_deco
+def test():
+    """This is my test function."""
+    time.sleep(2)
+
+test()
+print(test.__name__)
+print(test.__doc__)
+
+# Decorator Version 2
+
+def time_deco_v2(func):
+    @functools.wraps(func)
+    def inside():
+        start_time = time.time()
+        print("start: ", start_time )
+        func()
+        end_time = time.time()
+        print("Function Name: ",func.__name__)
+        print("Finsihed: ", end_time - start_time)
+    return inside
+
+@time_deco_v2
+def test_v2():
+    """This is my test function."""
+    time.sleep(2)
+
+test_v2()
+print(test_v2.__name__)
+print(test_v2.__doc__)
+
+
+
