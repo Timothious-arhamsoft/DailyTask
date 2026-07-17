@@ -68,14 +68,14 @@ print(test.__doc__)
 # Decorator Version 2
 
 def time_deco_v2(func):
+
     @functools.wraps(func)
-    def inside():
+    def inside(*args, **kwargs):
         start_time = time.time()
-        print("start: ", start_time )
-        func()
+        result = func(*args, **kwargs)
         end_time = time.time()
-        print("Function Name: ",func.__name__)
-        print("Finsihed: ", end_time - start_time)
+        print(f"{func.__name__} finished in {end_time-start_time:.4f} seconds")
+        return result
     return inside
 
 @time_deco_v2
@@ -99,5 +99,19 @@ example_indes = [1,2,3]
 
 for index,val in zip(example_indes, example_zip):
     print(index,val)
-# --- Task 6
 
+# --- Task 6
+# ---Correct Caching with lru_cache
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
+def fibonacci(n):
+    if n<2:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+@time_deco_v2
+def calculate():
+    return fibonacci(30)
+
+print(calculate())
