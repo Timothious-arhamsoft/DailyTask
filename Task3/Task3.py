@@ -79,13 +79,11 @@ def time_deco_v2(func):
     return inside
 
 @time_deco_v2
-def test_v2():
-    """This is my test function."""
-    time.sleep(2)
+def greet(name="Tim"):
+    """This is my Tuesday Function"""
+    print(name) 
 
-test_v2()
-print(test_v2.__name__)
-print(test_v2.__doc__)
-
-
+greet()
+print(greet.__name__)
+print(greet.__doc__)
 
