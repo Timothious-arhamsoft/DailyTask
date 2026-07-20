@@ -103,3 +103,24 @@ shop1.cars.append(Car_v2("Tesla", "Black"))
 print("Updated: \n",shop1)
 
 
+# --- Another Example
+@dataclass
+class Students:
+    name: str
+    subjects: list= field(default_factory=list)
+
+s1 = Students("Tim")
+s2 = Students("Tim2")
+
+s1.subjects.append("Python")
+print("Student 1: ",s1)
+print("Student 2: ",s2)
+'''
+Output: 
+Student 1:  Students(name='Tim', subjects=['Python'])
+Student 2:  Students(name='Tim2', subjects=[])
+'''
+#---Task 3
+# -----  Testing fundamentals 
+
+
