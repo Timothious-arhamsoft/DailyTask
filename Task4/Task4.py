@@ -14,7 +14,10 @@ class Car:
         return f"The name of the car is {self.model} with {self.color} color!"
     
     def __eq__(self, value):
-        return self.model == value.model and self.color == value.color
+        try:
+            return self.model == value.model and self.color == value.color
+        except AttributeError:
+            return False
  
         
 car1 = Car("Toyota", "Red")
@@ -147,4 +150,26 @@ For Task 3: Testing fundamentals — pytest
 
 #---Task 4
 # ----- Fixtures 
+import pytest
+
+@pytest.fixture
+def example():
+    return 1
+
+def test_with_fixture(example):
+    assert example == 1
+
+'''
+Task 4 is added in Task4/test_task2.py
+'''
+
+'''
+Task 5: Dataclass magic methods
+
+-> Created Car_v2 using @dataclass.
+-> Did not manually implement __repr__() or __eq__().
+-> Verified that dataclass automatically generated these methods.
+-> print(car1_v2) uses generated __repr__().
+-> car1_v2 == car2_v2 uses generated __eq__().
+'''
 
