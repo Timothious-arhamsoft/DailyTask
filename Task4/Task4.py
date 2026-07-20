@@ -53,6 +53,9 @@ class Car_v2:
 
 car1_v2 = Car_v2("BMW", "Black")
 car2_v2 = Car_v2("BMW", "Black")
+print("--Details--")
+print(f"-> {car1_v2.model}")
+print(f"-> {car1_v2.color}")
 print(car1_v2)
 print(car1_v2 == car2_v2)
 
