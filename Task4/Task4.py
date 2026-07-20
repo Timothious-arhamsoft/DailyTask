@@ -130,6 +130,21 @@ def add(a,b):
 def test_add():
     assert add(3,6) == 9
 
+'''
+For Task 3: Testing fundamentals — pytest
 
-test_add()
+-> Created a separate file `Task2_for_test.py` which contains:
+   - InsufficientFundsError custom exception
+   - withdraw() function
+
+-> Created a test file `test_task2.py` which contains pytest test cases:
+   - test_withdraw_success() checks the successful withdrawal flow using assert.
+   - test_withdraw_failure() checks the exception flow using pytest.raises().
+
+-> Ran pytest to automatically discover and execute the tests.
+-> Result: 2 tests passed successfully.
+'''
+
+#---Task 4
+# ----- Fixtures 
 
