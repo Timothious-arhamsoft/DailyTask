@@ -43,7 +43,7 @@ AttributeError: 'str' object has no attribute 'model'
 '''
 
 # ---> DataClass
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 @dataclass
 class Car_v2:
@@ -58,4 +58,48 @@ print(f"-> {car1_v2.model}")
 print(f"-> {car1_v2.color}")
 print(car1_v2)
 print(car1_v2 == car2_v2)
+
+
+
+#---Task 2
+# ----- Mutable default field
+from dataclasses import dataclass
+from typing import List
+# ---> Error, Becuase every object would share the same list. 
+
+# @dataclass
+# class Car_Shop:
+#     name: str
+#     models: list = []
+
+# -----Error
+'''
+ValueError: mutable default <class 'list'> for field models is not allowed: use default_factory
+
+'''
+
+# --Using Default Factory(We need Field to use this)
+models = ["BMW", "Hyundi", "Honda", "MG", "Audi"]
+colors = ["red", "blue", "black", "green"]
+
+def gen_shop():
+    return [Car_v2(m,c) for c in colors for m in models]
+
+# print(gen_shop())
+@dataclass
+class Car_Shop_v2:
+    cars: List[Car_v2] = field(default_factory=gen_shop)
+
+
+shop1 = Car_Shop_v2()
+shop2 = Car_Shop_v2()
+
+print(len(shop1.cars))
+print(len(shop2.cars))
+
+# Modeified
+print("Original:\n", shop1)
+shop1.cars.append(Car_v2("Tesla", "Black"))
+print("Updated: \n",shop1)
+
 
