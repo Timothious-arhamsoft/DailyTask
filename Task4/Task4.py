@@ -123,4 +123,13 @@ Student 2:  Students(name='Tim2', subjects=[])
 #---Task 3
 # -----  Testing fundamentals 
 
+def add(a,b):
+    return a+b
+
+# --- Test
+def test_add():
+    assert add(3,6) == 9
+
+
+test_add()
 
