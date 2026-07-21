@@ -1,7 +1,7 @@
 # Data Classes
 from dataclasses import dataclass, field
 from math import asin, cos, radians, sin, sqrt
-
+import pytest
 @dataclass
 class Position:
     name: str
@@ -55,4 +55,18 @@ class Deck_v2:
     cards: List[Playcard] = field(default_factory=create_deck)
 print("Deck V2: ")
 print(Deck_v2())
+
+
+# Parameterized test
+@pytest.mark.parametrize(
+    "a,b,result",
+    [
+        (1,2,3),
+        (3,5,8),
+        (4,7,11)
+    ]
+)
+def test_add(a,b, result):
+    assert a+b == result
+
 
