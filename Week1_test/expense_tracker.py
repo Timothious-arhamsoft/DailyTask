@@ -21,7 +21,13 @@ class NegativeAmountError(Exception):
     pass
 
 
-def add_expense(amount, category, expenses=[]):
+def add_expense(amount, category, expenses=None):
+    '''
+    As here again we have the mutable list so istead of using same list now
+    the separet list will be created for the every object.
+    '''
+    if expenses is None:
+        expenses = []
     if amount < 0:
         raise ValueError(f"amount cannot be negative: {amount}")
     expenses.append(Expense(amount, category, []))
