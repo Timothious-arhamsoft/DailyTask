@@ -1,7 +1,6 @@
 """A small expense tracker."""
 
 from dataclasses import dataclass, field
-from functools import lru_cache
 import json
 
 
