@@ -70,7 +70,7 @@ def summarize_by_category(expenses):
     }
 
 
-@lru_cache
+# As dictionaries are mutable and cannot be used as cache keys so i removed the cashe
 def category_multiplier(category, rates):
     return rates.get(category, 1.0)
 
