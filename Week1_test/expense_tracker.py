@@ -113,6 +113,12 @@ print(f"Discount fn reports its own name as: {apply_discount.__name__}")
 
 expenses_gen = iter_expenses(demo_expenses)
 print(f"Demo total: {total_of(expenses_gen)}")
+'''
+As this is generator so we must correctly iter
+So i Created a new generator because generators can only be consumed once.
+
+'''
+expenses_gen = iter_expenses(demo_expenses) 
 print(f"Demo total again: {total_of(expenses_gen)}")
 
 print("Per-category reports:")
