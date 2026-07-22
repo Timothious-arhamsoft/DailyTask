@@ -24,7 +24,7 @@ class NegativeAmountError(Exception):
 def add_expense(amount, category, expenses=None):
     '''
     As here again we have the mutable list so istead of using same list now
-    the separet list will be created for the every object.
+    this creates a new list for every Expense instance.
     '''
     if expenses is None:
         expenses = []
@@ -38,12 +38,19 @@ def add_expense(amount, category, expenses=None):
 
 
 def load_expenses_from_file(path):
+      
     try:
-        f = open(path)
-        data = json.load(f)
-        return data
-    except:
+        with open(path) as f:
+            data = json.load(f)
+            return data
+    except (json.JSONDecodeError, FileNotFoundError): #As there might be two exceptions that could occur because of json.
+        '''
+        As Here we have the Bare Exception so we must add here proper exception.
+        so i Replaced the bare except with specific exceptions. so only expected file errors are handled.
+        '''
         return []
+   
+
 
 
 def iter_expenses(expenses):
