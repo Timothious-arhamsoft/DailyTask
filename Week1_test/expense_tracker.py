@@ -93,7 +93,11 @@ def build_category_reporters(expenses):
     categories = sorted({e.category for e in expenses})
     reporters = []
     for cat in categories:
-        reporters.append(lambda: f"{cat}: {sum(e.amount for e in expenses if e.category == cat)}")
+        '''
+        AS the lambda is not correctly applied here so that is the reason, the same value is display.
+        lambda requires a default argument here to get the current category value.
+        '''
+        reporters.append(lambda cat=cat: f"{cat}: {sum(e.amount for e in expenses if e.category == cat)}")
     return reporters
 
 
