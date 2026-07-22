@@ -33,7 +33,7 @@ def add_expense(amount, category, expenses=None):
         As Here we are using the Wrong Exception, we must use the custom exception that we have created.
         '''
         raise NegativeAmountError(f"amount cannot be negative: {amount}")
-    expenses.append(Expense(amount, category, []))
+    expenses.append(Expense(amount, category)
     return expenses
 
 
