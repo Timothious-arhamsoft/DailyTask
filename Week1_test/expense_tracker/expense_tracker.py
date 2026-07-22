@@ -99,27 +99,27 @@ def build_category_reporters(expenses):
         reporters.append(lambda cat=cat: f"{cat}: {sum(e.amount for e in expenses if e.category == cat)}")
     return reporters
 
+if __name__ == "__main__":
+    print("Expense tracker demo starting...")
+    demo_expenses = add_expense(42.50, "food")
+    demo_expenses = add_expense(15.00, "transport", demo_expenses)
 
-print("Expense tracker demo starting...")
-demo_expenses = add_expense(42.50, "food")
-demo_expenses = add_expense(15.00, "transport", demo_expenses)
+    rates = {"food": 1.1, "transport": 1.0}
+    print(f"Food multiplier: {category_multiplier('food', rates)}")
 
-rates = {"food": 1.1, "transport": 1.0}
-print(f"Food multiplier: {category_multiplier('food', rates)}")
+    discounted = apply_discount(demo_expenses[0], 0.1)
+    print(f"Discount fn reports its own name as: {apply_discount.__name__}")
 
-discounted = apply_discount(demo_expenses[0], 0.1)
-print(f"Discount fn reports its own name as: {apply_discount.__name__}")
+    expenses_gen = iter_expenses(demo_expenses)
+    print(f"Demo total: {total_of(expenses_gen)}")
+    '''
+    As this is generator so we must correctly iter
+    So i Created a new generator because generators can only be consumed once.
 
-expenses_gen = iter_expenses(demo_expenses)
-print(f"Demo total: {total_of(expenses_gen)}")
-'''
-As this is generator so we must correctly iter
-So i Created a new generator because generators can only be consumed once.
+    '''
+    expenses_gen = iter_expenses(demo_expenses) 
+    print(f"Demo total again: {total_of(expenses_gen)}")
 
-'''
-expenses_gen = iter_expenses(demo_expenses) 
-print(f"Demo total again: {total_of(expenses_gen)}")
-
-print("Per-category reports:")
-for report in build_category_reporters(demo_expenses):
-    print(f"  {report()}")
+    print("Per-category reports:")
+    for report in build_category_reporters(demo_expenses):
+        print(f"  {report()}")
