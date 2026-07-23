@@ -11,27 +11,30 @@ class InsufficientFundsError(Exception):
 class BankAccount:
     def __init__(self, owner, balance):
         self.owner = owner
-        # Task 4: Task mangling
-        self._balance = balance
+        # Task 4: name mangling
+        self.__balance = balance
 
-        if self._balance<0:
+        if self.__balance<0:
             raise ValueError("Balance cannot be negative!")
     def __repr__(self):
-        return f"BankAccount(owner= {self.owner}, balance= {self._balance})"
+        return f"BankAccount(owner= {self.owner}, balance= {self.__balance})"
     
     def __eq__(self, other):
-        return self.owner == other.owner and self._balance == other._balance
+        return self.owner == other.owner and self.__balance == other.__balance
     #Task 3:  
     def withdraw(self,amount):
-        if amount> self._balance:
-            raise InsufficientFundsError(self._balance, amount)
+        if amount> self.__balance:
+            raise InsufficientFundsError(self.__balance, amount)
         else:
-            self._balance -= amount
-            return f"Your reamining balance is {self._balance}"
+            self.__balance -= amount
+            return f"Your reamining balance is {self.__balance}"
     def show(self):
-        return f"Current Balance is {self._balance}"
+        return f"Current Balance is {self.__balance}"
 
-
+class SpecialAccount(BankAccount):
+    def __init__(self, owner, balance, bonus):
+        super().__init__(owner, balance)
+        self.__balance = balance + bonus 
 
 # Task 5: Data Class Comparison:
 '''
@@ -51,6 +54,13 @@ account2 = BankAccount("Gill", 200)
 # Task 2: Prove self is just a parameter
 print(account1.show())
 print(BankAccount.show(account1))
+
+# Task 4: Name Mangling
+'''
+Name mangling stops a subclass's __balance from silently overwriting the parent.
+'''
+s = SpecialAccount("Tim", 100, 10)
+print(vars(s))
 
 # Checking Equality
 print(account2)
