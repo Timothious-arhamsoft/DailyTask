@@ -27,7 +27,7 @@ class BankAccount:
             raise InsufficientFundsError(self.__balance, amount)
         else:
             self.__balance -= amount
-            return f"Your reamining balance is {self.__balance}"
+            return f"Your remaining balance is {self.__balance}"
     def show(self):
         return f"Current Balance is {self.__balance}"
 
