@@ -66,4 +66,13 @@ print(vars(s))
 print(account2)
 print(account1 == account2)
 
+# Checking Withdraw
+account1.withdraw(50)
+print(account1.show())
+
+try:
+    account1.withdraw(1000)
+except InsufficientFundsError as e:
+    print(e)
+
 
