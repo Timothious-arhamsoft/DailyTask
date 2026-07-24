@@ -14,4 +14,20 @@ class BankAccount:
         return self.owner == value.owner and self.__balance == value.__balance
 
 
+class SavingsAccount(BankAccount):
+    def __int__(self, owner, balance, interest_rate):
+        super().__init__(owner, balance)
+        self.interest_rate = interest_rate
 
+
+
+def main():
+    # Check Task1
+    acc1 = BankAccount("Tim", 5000)
+    acc2 = BankAccount("Tim", 5000)
+
+    print(acc1)
+    print(acc1 == acc2)
+
+if __name__ == "__main__":
+    main()
