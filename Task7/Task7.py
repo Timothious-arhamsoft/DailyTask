@@ -33,6 +33,9 @@ class SavingsAccount(BankAccount):
     def summary(self):
         return f"Total balance of {self.owner} Saving account is Rs{self.balance} and interest on it is {self.interest_rate}"
 
+def print_all(acc_list):
+    for account in acc_list:
+        print(account.summary())
 def main():
     # Check Task1
     acc1 = BankAccount("Tim", 5000)
@@ -54,9 +57,7 @@ def main():
     acc_list = []
     acc_list.append(acc1)
     acc_list.append(sav_acc)
-
-    for i in acc_list:
-        print(i.summary())
+    print_all(acc_list)
 
 if __name__ == "__main__":
     main()
