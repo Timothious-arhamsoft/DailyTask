@@ -22,8 +22,10 @@ class SavingsAccount(BankAccount):
     def __init__(self, owner, balance, interest_rate):
         super().__init__(owner, balance)
         self.interest_rate = interest_rate
-
-
+        
+    # Task 3: Extending the __repr__() method 
+    def __repr__(self):
+        return super().__repr__() + f", interest_rate= {self.interest_rate}"
 
 def main():
     # Check Task1
@@ -38,6 +40,9 @@ def main():
     print(sav_acc.owner)
     print(sav_acc.balance)
     print(sav_acc.interest_rate)
+
+    # Check Task3
+    print(sav_acc)
 
 if __name__ == "__main__":
     main()
