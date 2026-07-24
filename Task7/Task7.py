@@ -34,6 +34,14 @@ class SavingsAccount(BankAccount):
         return f"Total balance of {self.owner} Saving account is Rs{self.balance} and interest on it is {self.interest_rate}"
 
 # Task 5: Constructor
+
+'''
+Why shouldn't Bank inherit from BankAccount?
+-> A Bank should not inherit from BankAccount because a bank is not a type of bank account. Instead, 
+a bank manages and contains many different accounts. This is a "has-a" relationship rather than an 
+"is-a" relationship, so using composition is the appropriate design choice.
+
+'''
 class Bank:
     def __init__(self):
         self.accounts = []
