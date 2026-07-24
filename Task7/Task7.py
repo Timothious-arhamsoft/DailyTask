@@ -16,6 +16,9 @@ class BankAccount:
 
     def __eq__(self, value):
         return self.owner == value.owner and self.__balance == value.__balance
+    # Task 4: Polymorphism
+    def summary(self):
+        return f"Total balance of {self.owner} Curent account is Rs{self.__balance}"
 
 # Task 2: Inheritance
 class SavingsAccount(BankAccount):
@@ -26,6 +29,9 @@ class SavingsAccount(BankAccount):
     # Task 3: Extending the __repr__() method 
     def __repr__(self):
         return super().__repr__() + f", interest_rate= {self.interest_rate}"
+    # Task 4: Polymorphism
+    def summary(self):
+        return f"Total balance of {self.owner} Saving account is Rs{self.balance} and interest on it is {self.interest_rate}"
 
 def main():
     # Check Task1
@@ -43,6 +49,14 @@ def main():
 
     # Check Task3
     print(sav_acc)
+
+    # check Task 4: Polymorphism
+    acc_list = []
+    acc_list.append(acc1)
+    acc_list.append(sav_acc)
+
+    for i in acc_list:
+        print(i.summary())
 
 if __name__ == "__main__":
     main()
