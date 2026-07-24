@@ -33,11 +33,26 @@ class SavingsAccount(BankAccount):
     def summary(self):
         return f"Total balance of {self.owner} Saving account is Rs{self.balance} and interest on it is {self.interest_rate}"
 
+# Task 5: Constructor
+class Bank:
+    def __init__(self):
+        self.accounts = []
+    def add_account(self, account):
+        self.accounts.append(account)
+
+    def total_assets(self):
+        total = 0
+        for acc in self.accounts:
+            total+=acc.balance
+        return total
+
+    
 def print_all(acc_list):
     for account in acc_list:
         print(account.summary())
 def main():
     # Check Task1
+    print("-> Check Task1: BankAccount")
     acc1 = BankAccount("Tim", 5000)
     acc2 = BankAccount("Tim", 5000)
 
@@ -45,19 +60,30 @@ def main():
     print(acc1 == acc2)
 
     # Check Task2
+    print("-> Check Task2: Saving Account")
     sav_acc = SavingsAccount("Tim", 10000, 5)
     print(sav_acc.owner)
     print(sav_acc.balance)
     print(sav_acc.interest_rate)
 
     # Check Task3
+    print("-> Check Task3: Extend __repr__")
     print(sav_acc)
 
     # check Task 4: Polymorphism
     acc_list = []
     acc_list.append(acc1)
     acc_list.append(sav_acc)
+    print("-> Check Task4: Polymorphism")
     print_all(acc_list)
+
+    # Check Task 5
+    Tims_bank = Bank()
+    Tims_bank.add_account(acc1)
+    Tims_bank.add_account(acc2)
+    Tims_bank.add_account(sav_acc)
+    print("-> Check Task5: Constructor")
+    print(Tims_bank.total_assets())
 
 if __name__ == "__main__":
     main()
