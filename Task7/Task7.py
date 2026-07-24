@@ -7,15 +7,19 @@ class BankAccount:
         self.owner = owner
         self.__balance = balance
 
+    @property
+    # This decrator help to act as a getter
+    def balance(self):
+        return self.__balance
     def __repr__(self):
         return f"BankAccount(owner={self.owner}, balance= {self.__balance})"
 
     def __eq__(self, value):
         return self.owner == value.owner and self.__balance == value.__balance
 
-
+# Task 2: Inheritance
 class SavingsAccount(BankAccount):
-    def __int__(self, owner, balance, interest_rate):
+    def __init__(self, owner, balance, interest_rate):
         super().__init__(owner, balance)
         self.interest_rate = interest_rate
 
@@ -28,6 +32,12 @@ def main():
 
     print(acc1)
     print(acc1 == acc2)
+
+    # Check Task2
+    sav_acc = SavingsAccount("Tim", 10000, 5)
+    print(sav_acc.owner)
+    print(sav_acc.balance)
+    print(sav_acc.interest_rate)
 
 if __name__ == "__main__":
     main()
