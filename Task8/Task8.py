@@ -30,9 +30,10 @@ class BankAccount:
     def summary(self):
         return f"Current Account: {self.owner} has a {self.__balance}"
 
-    def deposit(self,amount:str):
+    def deposit(self,amount:float):
         self.__balance+=amount
         logging.info(f"{amount} deposited into {self.owner} account at {datetime.datetime.now()}.")
+        
     def withdraw(self, amount: float):
         if amount> self.__balance:
             raise InsufficientFundsError(self.__balance, amount)
