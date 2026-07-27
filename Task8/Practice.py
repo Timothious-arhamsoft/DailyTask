@@ -1,3 +1,4 @@
+import logging
 # Types of Formating
 
 # 1) Dynamic Typing
@@ -35,3 +36,22 @@ class TheHobbit:
 
 the_hobbit = TheHobbit()
 print(len(the_hobbit))
+
+
+# Loging:
+# Warning
+logging.warning("Remain Calm!")
+# Debug
+logging.debug("This is a debug Message!")
+# Info
+logging.info("This is an info Message")
+# Error
+logging.error("This is an Error Message")
+# Critical
+logging.critical("This is an critical Message")
+# Basic Config
+logging.basicConfig(level=logging.DEBUG)
+logging.debug("This will get logged.")
+
+logging.basicConfig(format="%(levelname)s:%(name)s:%(message)s")
+logging.warning("Hello, Warning!")

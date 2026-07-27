@@ -1,4 +1,15 @@
+# Task 2: Logging
+import logging
 
+
+class InsufficientFundsError(Exception):
+    def __init__(self, balance, amount):
+        self.balance = balance
+        self.amount = amount
+        super().__init__(f"Insufficient funds: balance is Rs{balance}, attempted withdrawal is Rs{amount}.")
+
+
+# Task 1: Type hints
 class BankAccount:
     def __init__(self, owner: str, balance: float):
         self.owner = owner
@@ -18,6 +29,14 @@ class BankAccount:
 
     def deposit(self,amount:str):
         self.__balance+=amount
+        logging.info(f"{amount} deposited into {self.owner} account.")
+    def withdraw(self, amount: float):
+        if amount> self.__balance:
+            raise InsufficientFundsError(self.__balance, amount)
+
+        self.__balance-= amount
+        logging.info(f"{self.owner} has withdrawn {amount}, now the balance is {self.__balance}.")
+
 
 class SavingsAccount(BankAccount):
     def __init__(self, owner: str, balance: float, interest_rate: float):
@@ -34,7 +53,6 @@ class SavingsAccount(BankAccount):
 class Bank:
     def __int__(self):
         self.accounts: list[BankAccount] = []
-
 
     def add_account(self, account: BankAccount):
         self.accounts.append(account)
