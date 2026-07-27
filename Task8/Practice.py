@@ -21,3 +21,17 @@ The opposite of dynamic typing is static typing. Static type checks are performe
 without running the program. In most statically typed languages, for instance C and Java,
 this is done as your program is compiled.
 '''
+
+# 3) Duck Typing
+'''
+Another term that is often used when talking about Python is duck typing. 
+This moniker comes from the phrase “if it walks like a duck and it quacks like a duck,
+then it must be a duck”
+
+'''
+class TheHobbit:
+    def __len__(self):
+        return 95022
+
+the_hobbit = TheHobbit()
+print(len(the_hobbit))
