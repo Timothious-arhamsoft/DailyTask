@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 # Types of Formating
 
 # 1) Dynamic Typing
@@ -55,3 +56,16 @@ logging.debug("This will get logged.")
 
 logging.basicConfig(format="%(levelname)s:%(name)s:%(message)s")
 logging.warning("Hello, Warning!")
+
+
+print(Path.cwd())
+print(Path.home())
+
+base = Path(__file__).parent
+print("Base: ", base)
+source = base / Path("practice.c")
+destination = base / Path("practice.txt")
+print(source)
+print(source.exists())
+if source.exists() and not destination.exists():
+    source.replace(destination)
