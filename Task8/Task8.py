@@ -1,6 +1,9 @@
 # Task 2: Logging
 import logging
 
+# Task 4: Using DateTime
+import datetime
+
 
 class InsufficientFundsError(Exception):
     def __init__(self, balance, amount):
@@ -29,13 +32,13 @@ class BankAccount:
 
     def deposit(self,amount:str):
         self.__balance+=amount
-        logging.info(f"{amount} deposited into {self.owner} account.")
+        logging.info(f"{amount} deposited into {self.owner} account at {datetime.datetime.now()}.")
     def withdraw(self, amount: float):
         if amount> self.__balance:
             raise InsufficientFundsError(self.__balance, amount)
 
         self.__balance-= amount
-        logging.info(f"{self.owner} has withdrawn {amount}, now the balance is {self.__balance}.")
+        logging.info(f"{self.owner} has withdrawn {amount} at {datetime.datetime.now()}, now the balance is {self.__balance}.")
 
 
 class SavingsAccount(BankAccount):
