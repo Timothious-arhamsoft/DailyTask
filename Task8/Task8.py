@@ -33,7 +33,7 @@ class BankAccount:
     def deposit(self,amount:float):
         self.__balance+=amount
         logging.info(f"{amount} deposited into {self.owner} account at {datetime.datetime.now()}.")
-        
+
     def withdraw(self, amount: float):
         if amount> self.__balance:
             raise InsufficientFundsError(self.__balance, amount)
@@ -55,7 +55,7 @@ class SavingsAccount(BankAccount):
         return f"Total balance of {self.owner} Saving account is Rs{self.balance} and interest on it is {self.interest_rate}"
 
 class Bank:
-    def __int__(self):
+    def __init__(self):
         self.accounts: list[BankAccount] = []
 
     def add_account(self, account: BankAccount):
