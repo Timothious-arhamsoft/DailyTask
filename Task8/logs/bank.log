@@ -1,0 +1,5 @@
+2026-07-27 20:05:03,349 __main__ [INFO] Bank application started
+2026-07-27 20:05:03,350 Task8 [INFO] 200 deposited into Tim account now balance is 5200.
+2026-07-27 20:05:03,350 Task8 [WARNING] Withdrawl of 1000000 rejected as balance is 5200
+2026-07-27 20:05:03,350 __main__ [ERROR] Withdrawal failed: Insufficient funds: balance is Rs5200, attempted withdrawal is Rs1000000.
+2026-07-27 20:05:03,350 __main__ [INFO] Total bank balance: Total Bank Balance is 15200.0.

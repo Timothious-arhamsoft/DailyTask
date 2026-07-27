@@ -1,22 +1,12 @@
 [
   {
-    "category": "groceries",
-    "amount": 45.5,
-    "timestamp": "2026-07-27T19:34:17.643674"
+    "category": "food",
+    "amount": 50,
+    "timestamp": "2026-07-27T20:05:03.350684"
   },
   {
     "category": "rent",
-    "amount": 1200.0,
-    "timestamp": "2026-07-27T19:34:17.643682"
-  },
-  {
-    "category": "rent",
-    "amount": 1200.0,
-    "timestamp": "2026-07-27T19:34:17.643684"
-  },
-  {
-    "category": "rent",
-    "amount": 1400.0,
-    "timestamp": "2026-07-27T19:34:17.643688"
+    "amount": 1200,
+    "timestamp": "2026-07-27T20:05:03.350690"
   }
 ]
