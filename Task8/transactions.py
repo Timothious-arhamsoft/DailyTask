@@ -5,6 +5,9 @@ from pathlib import Path
 import datetime
 import json
 
+# Task 5
+import collections
+
 
 class Transaction:
     def __init__(self, category: str, amount: float, timestamp: datetime.datetime = None):
@@ -52,6 +55,16 @@ def transactions_today(transactions: list[Transaction]) -> list[Transaction]:
     today = datetime.datetime.now().date()
     return [t for t in transactions if t.timestamp.date() == today]
 
+def tally_by_category(transactions: list[Transaction]) -> collections.Counter:
+    return collections.Counter(t.category for t in transactions)
+
+
+def group_amounts_by_category(transactions: list[Transaction]) -> collections.defaultdict:
+    grouped: collections.defaultdict[str, list] = collections.defaultdict(list)
+    for t in transactions:
+        grouped[t.category].append(t.amount)
+    return grouped
+
 
 def main():
     print("\n-> Task 3/4: save/load transactions with real datetime objects")
@@ -68,8 +81,9 @@ def main():
     print("\n-> Task 4: transactions_today")
     print(transactions_today(loaded))
 
-    print("\n-> Loading a file that doesn't exist yet")
-    print(load_transactions("data/nope.json"))
+    print("\n-> Task 5: Counter and defaultdict")
+    print(tally_by_category(loaded))
+    print(dict(group_amounts_by_category(loaded)))
 
 
 if __name__ == "__main__":
