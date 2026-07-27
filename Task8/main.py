@@ -24,10 +24,12 @@ def main():
         account.withdraw(1000000)
 
     except InsufficientFundsError as e:
-        logger.error(
-            "Withdrawal failed: %s",
-            e
-        )
+        logger.error("Withdrawal failed: %s",e)
+
+    try:
+        account.deposit("fifty")
+    except TypeError as e:
+        logger.error(e)
 
 
     bank = Bank()

@@ -29,14 +29,14 @@ class BankAccount:
             return NotImplemented
         return self.owner == value.owner and self.__balance == value.__balance
 
-    def summary(self):
+    def summary(self) -> str:
         return f"Current Account: {self.owner} has a {self.__balance}"
 
-    def deposit(self,amount:float):
+    def deposit(self,amount:float) -> None:
         self.__balance+=amount
         logger.info("%s deposited into %s account now balance is %s.", amount, self.owner, self.__balance)
 
-    def withdraw(self, amount: float):
+    def withdraw(self, amount: float) -> None:
         if amount> self.__balance:
             logger.warning("Withdrawl of %s rejected as balance is %s", amount, self.__balance)
             raise InsufficientFundsError(self.__balance, amount)
@@ -54,21 +54,21 @@ class SavingsAccount(BankAccount):
          return super().__repr__() + \
                f", interest_rate={self.interest_rate}"
 
-    def summary(self):
+    def summary(self) -> str:
         return f"Total balance of {self.owner} Saving account is Rs{self.balance} and interest on it is {self.interest_rate}"
 
 class Bank:
     def __init__(self):
         self.accounts: list[BankAccount] = []
 
-    def add_account(self, account: BankAccount):
+    def add_account(self, account: BankAccount) -> None:
         self.accounts.append(account)
 
-    def total_acc_balance(self):
+    def total_acc_balance(self) -> float:
         total:float = 0.0
         for acc in self.accounts:
             total+=acc.balance
-        return f"Total Bank Balance is {total}."
+        return total
 
 
 
