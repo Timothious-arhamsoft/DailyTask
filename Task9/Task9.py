@@ -106,7 +106,7 @@ def main():
     # ----> Sequencial
     # seq_start = time.time()
     # for i in range(5):
-    #     Seq_task(1)
+    #     Seq_task(i)
     # seq_end = time.time()
     # print("Sequencial Time: ", seq_end-seq_start)
 
