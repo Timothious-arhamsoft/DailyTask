@@ -2,6 +2,7 @@ import logging
 from pathlib import Path
 from collections import Counter, defaultdict
 from datetime import datetime
+import json
 # Types of Formating
 
 # 1) Dynamic Typing
@@ -96,3 +97,21 @@ logging.basicConfig(
     force=True
 )
 logging.info("User Logged In")
+
+# Path
+base = Path(__file__).parent
+print(base)
+
+data = [
+    {"name": "Ali", "age": 20},
+    {"name": "Sara", "age": 22}
+]
+
+# Created File
+path = base / Path("students.json")
+path.write_text(json.dumps(data, indent=4))
+
+# Load File
+load_file = base / Path("students.json")
+students = json.loads(load_file.read_text())
+print(students)
