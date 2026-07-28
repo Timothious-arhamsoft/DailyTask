@@ -98,7 +98,7 @@ def http_request():
         else:
             print("Request Failed")
     except requests.exceptions.RequestException as e:
-        print(e)
+        print("Request Error: ",e)
 
 
 def main():
