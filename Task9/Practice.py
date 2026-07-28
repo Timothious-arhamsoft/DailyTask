@@ -14,8 +14,8 @@ def http_request():
         response = requests.get(url)
         print("Status: ", response.status_code)
    
-        # data = response.json()
-        print("Data: ",data)
+        data = response.json()
+        # print("Data: ",data)
         print("Id:", data["userId"])
         print("Title: ", data["title"])
     except requests.exceptions.RequestException  as e:
