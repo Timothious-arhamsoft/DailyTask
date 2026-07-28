@@ -47,8 +47,20 @@ def Thead_task(number):
 
 
 # Task 3:  CPU-bound proof
+def cpu_bound_squares():
+    total = 0
+
+    for i in range(20_000_000):
+        total += i*i
+
+    return total
+
+
+
+
 
 def main():
+    # Task 2
     # ----> Sequencial
     # seq_start = time.time()
     # for i in range(5):
@@ -57,13 +69,28 @@ def main():
     # print("Sequencial Time: ", seq_end-seq_start)
 
     # ----> Thread
-    start = time.time()
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        executor.map(Thead_task, range(1,6))
+    # start = time.time()
+    # with ThreadPoolExecutor(max_workers=5) as executor:
+    #     executor.map(Thead_task, range(1,6))
 
-    end = time.time()
+    # end = time.time()
 
-    print("Thread Time:", end-start)
+    # print("Thread Time:", end-start)
+
+    # Task 3
+    # Cpu Bound
+    # cpu_bound_start_time = time.time()
+    # for _ in range(4):
+    #     cpu_bound_squares()
+    # cpu_bound_end_time = time.time()
+    # print("Cpu Bound Time: ", cpu_bound_end_time-cpu_bound_start_time)
+
+    #Thread
+    thread_bound_start_time = time.time()
+    with ThreadPoolExecutor() as executor:
+        list(executor.map(lambda x:cpu_bound_squares(), range(4)))
+    thread_bound_end_time = time.time()
+    print("Thread Time: ", thread_bound_end_time-thread_bound_start_time)
 
 if __name__ == "__main__":
     main()
