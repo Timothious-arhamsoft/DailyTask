@@ -55,8 +55,28 @@ def cpu_bound_squares():
 
     return total
 
+# Task 4: Asyncio
+import asyncio
+async def asyn_task(n):
+    print(f"Asyn Task {n} started")
+    await asyncio.sleep(1)
+    print(f"Asyn Task {n} Ended")
 
+async def async_main():
 
+    start = time.time()
+
+    await asyncio.gather(
+        asyn_task(1),
+        asyn_task(2),
+        asyn_task(3),
+        asyn_task(4),
+        asyn_task(5)
+    )
+
+    end = time.time()
+
+    print("Async Time:", end - start)
 
 
 def main():
@@ -86,11 +106,14 @@ def main():
     # print("Cpu Bound Time: ", cpu_bound_end_time-cpu_bound_start_time)
 
     #Thread
-    thread_bound_start_time = time.time()
-    with ThreadPoolExecutor() as executor:
-        list(executor.map(lambda x:cpu_bound_squares(), range(4)))
-    thread_bound_end_time = time.time()
-    print("Thread Time: ", thread_bound_end_time-thread_bound_start_time)
+    # thread_bound_start_time = time.time()
+    # with ThreadPoolExecutor() as executor:
+    #     list(executor.map(lambda x:cpu_bound_squares(), range(4)))
+    # thread_bound_end_time = time.time()
+    # print("Thread Time: ", thread_bound_end_time-thread_bound_start_time)
+
+    # Task 4
+    asyncio.run(async_main())
 
 if __name__ == "__main__":
     main()
