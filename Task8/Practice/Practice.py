@@ -1,5 +1,7 @@
 import logging
 from pathlib import Path
+from collections import Counter, defaultdict
+from datetime import datetime
 # Types of Formating
 
 # 1) Dynamic Typing
@@ -69,3 +71,28 @@ print(source)
 print(source.exists())
 if source.exists() and not destination.exists():
     source.replace(destination)
+
+# Counter
+sample = ["A", "B", "C", "D", "E", "A", "C"]
+print(Counter(sample))
+
+# Defaultdict
+d = defaultdict(list)
+d["Fruit"].append("Apple")
+print(d)
+
+# PathLib
+path = Path("data") / "test.txt"
+print(path)
+
+# Datetime
+today = datetime.now()
+print(today)
+print(type(today))
+
+# Logging Info
+logging.basicConfig(
+    level=logging.INFO,
+    force=True
+)
+logging.info("User Logged In")
