@@ -1,0 +1,6 @@
+2026-07-27 20:16:34,788 __main__ [INFO] Bank application started
+2026-07-27 20:16:34,789 Task8 [INFO] 200 deposited into Tim account now balance is 5200.
+2026-07-27 20:16:34,789 Task8 [WARNING] Withdrawl of 1000000 rejected as balance is 5200
+2026-07-27 20:16:34,789 __main__ [ERROR] Withdrawal failed: Insufficient funds: balance is Rs5200, attempted withdrawal is Rs1000000.
+2026-07-27 20:16:34,789 __main__ [ERROR] unsupported operand type(s) for +=: 'int' and 'str'
+2026-07-27 20:16:34,789 __main__ [INFO] Total bank balance: 15200.0
