@@ -18,7 +18,7 @@ Multiprocessing:
 it uses both Concurrency and Parallelism as it provides true parallelism.
 
 '''
-
+#-------------------------
 # CPU's hardware threads
 # Command: lscpu
 '''
@@ -30,6 +30,7 @@ Socket(s):               1
 (Total Logical CPUs:)
 CPU(s):                  8
 '''
+#-------------------------
 
 # Task 2: Threaded, I/O-bound
 import time
