@@ -33,7 +33,7 @@ CPU(s):                  8
 
 # Task 2: Threaded, I/O-bound
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
 
 def Seq_task(number):
     print(f"Sequencial Task {number} started")
@@ -47,7 +47,7 @@ def Thead_task(number):
 
 
 # Task 3:  CPU-bound proof
-def cpu_bound_squares():
+def cpu_bound_squares(_):
     total = 0
 
     for i in range(20_000_000):
@@ -78,6 +78,10 @@ async def async_main():
 
     print("Async Time:", end - start)
 
+# Task 5: Real HTTP requests
+# import requests
+# url = ""
+
 
 def main():
     # Task 2
@@ -100,20 +104,28 @@ def main():
     # Task 3
     # Cpu Bound
     # cpu_bound_start_time = time.time()
-    # for _ in range(4):
-    #     cpu_bound_squares()
+    # for i in range(4):
+    #     cpu_bound_squares(i)
     # cpu_bound_end_time = time.time()
     # print("Cpu Bound Time: ", cpu_bound_end_time-cpu_bound_start_time)
 
     #Thread
     # thread_bound_start_time = time.time()
-    # with ThreadPoolExecutor() as executor:
-    #     list(executor.map(lambda x:cpu_bound_squares(), range(4)))
+    # with ThreadPoolExecutor(max_workers=4) as executor:
+    #     list(executor.map(cpu_bound_squares, range(4)))
     # thread_bound_end_time = time.time()
     # print("Thread Time: ", thread_bound_end_time-thread_bound_start_time)
 
+    # Multitasking
+    multi_start_time = time.time()
+    with ProcessPoolExecutor() as executor:
+        list(executor.map(cpu_bound_squares, range(4)))
+    multi_end_time = time.time()
+    print("Multiprocessing Time: ", multi_end_time-multi_start_time)
+
+
     # Task 4
-    asyncio.run(async_main())
+    # asyncio.run(async_main())
 
 if __name__ == "__main__":
     main()
