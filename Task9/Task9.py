@@ -79,8 +79,25 @@ async def async_main():
     print("Async Time:", end - start)
 
 # Task 5: Real HTTP requests
-# import requests
-# url = ""
+import requests
+def http_request():
+    url = "https://jsonplaceholder.typicode.com/users/5"
+    try:
+        response = requests.get(url)
+        status = response.status_code
+        print("Status Code: ",status)
+        if status == 200:
+            data = response.json()
+            # print(data)
+            print("\nUser Details")
+            print("Name:", data["name"])
+            print("Username:", data["username"])
+            print("Email:", data["email"])
+            print("City:", data["address"]["city"])
+        else:
+            print("Request Failed")
+    except requests.exceptions.RequestException as e:
+        print(e)
 
 
 def main():
@@ -117,16 +134,18 @@ def main():
     # print("Thread Time: ", thread_bound_end_time-thread_bound_start_time)
 
     # Multitasking
-    multi_start_time = time.time()
-    with ProcessPoolExecutor() as executor:
-        list(executor.map(cpu_bound_squares, range(4)))
-    multi_end_time = time.time()
-    print("Multiprocessing Time: ", multi_end_time-multi_start_time)
+    # multi_start_time = time.time()
+    # with ProcessPoolExecutor() as executor:
+    #     list(executor.map(cpu_bound_squares, range(4)))
+    # multi_end_time = time.time()
+    # print("Multiprocessing Time: ", multi_end_time-multi_start_time)
 
 
     # Task 4
     # asyncio.run(async_main())
 
+    #Task 5
+    http_request()
 if __name__ == "__main__":
     main()
 
