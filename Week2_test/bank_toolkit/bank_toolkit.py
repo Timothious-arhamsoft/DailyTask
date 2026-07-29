@@ -95,24 +95,27 @@ class SavingsAccount(BankAccount):
 
 class Bank:
     def __init__(self) -> None:
-        # TODO
-        raise NotImplementedError
+        # Done
+        self.accounts: list[BankAccount] = []
 
     def add_account(self, account: BankAccount) -> None:
-        # TODO
-        raise NotImplementedError
+        # Done
+        self.accounts.append(account)
 
     def total_assets(self) -> float:
         """Sum of every held account's balance."""
-        # TODO
-        raise NotImplementedError
+        # Done
+        return sum(account.balance for account in self.accounts)
 
     def summary_by_owner(self) -> dict[str, float]:
         """Map each owner name to their total balance across every account
         they hold — an owner may have more than one account.
         """
-        # TODO
-        raise NotImplementedError
+        # Done
+        summary = defaultdict(float)
+        for account in self.accounts:
+            summary[account.owner]+=account.balance
+        return dict(summary)
 
 
 def save_accounts(path: Path, accounts: list[BankAccount]) -> None:
