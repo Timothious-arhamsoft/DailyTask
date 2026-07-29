@@ -24,15 +24,23 @@ class InsufficientFundsError(Exception):
 class BankAccount:
     def __init__(self, owner: str, balance: float = 0.0) -> None:
         """Raise ValueError if balance is negative."""
-        # TODO
-        raise NotImplementedError
+        # Done
+        if balance<0:
+            raise ValueError("Balance must not be negative.")
+
+        self.owner = owner
+        self.balance = balance
 
     def deposit(self, amount: float) -> None:
         """Raise ValueError if amount is not positive (zero or negative).
         On success, increase the balance and log an INFO-level message.
         """
-        # TODO
-        raise NotImplementedError
+        # DONE
+        if amount<=0:
+            raise ValueError("Deposit must be positive.")
+        
+        self.balance+=amount
+        logger.info(f"{self.owner} deposited {amount}")
 
     def withdraw(self, amount: float) -> None:
         """If amount exceeds the current balance: log a WARNING-level message
@@ -41,8 +49,13 @@ class BankAccount:
         happens. On success, decrease the balance and log an INFO-level
         message.
         """
-        # TODO
-        raise NotImplementedError
+        # DONE
+        if amount> self.balance:
+            logger.warning(f"Your requested amount {amount} is more than your current balance which is {self.balance}")
+            raise InsufficientFundsError("Your Balance is Low")
+            
+        self.balance-=amount
+        logger.info(f"Sucessfully withdrawl {amount}, now current balance is {self.balance}")
 
     def __repr__(self) -> str:
         """Must include the owner and the balance in the string."""
