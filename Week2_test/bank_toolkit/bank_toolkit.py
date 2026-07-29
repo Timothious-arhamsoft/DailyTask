@@ -191,8 +191,10 @@ def apply_interest_to_all(accounts: list[SavingsAccount]) -> None:
     ThreadPoolExecutor to do it — the same tool this week's threading kata
     used, applied here for real.
     """
-    # TODO
-    raise NotImplementedError
+    # Done
+    with ThreadPoolExecutor() as executor:
+        list(executor.map(lambda account: account.apply_interest(), accounts))
+  
 
 
 def fetch_rates_concurrently(symbols: list[str], fetch_fn: Callable[[str], float]) -> dict[str, float]:
