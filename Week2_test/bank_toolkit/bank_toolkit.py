@@ -80,8 +80,9 @@ class SavingsAccount(BankAccount):
 
     def apply_interest(self) -> None:
         """balance += balance * interest_rate."""
-        # TODO
-        raise NotImplementedError
+        # Done
+        int_rate = self.balance * self.interest_rate
+        self.balance+=int_rate
 
     def __repr__(self) -> str:
         """Must extend (not fully rewrite) the parent's __repr__ — start from
