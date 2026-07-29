@@ -88,8 +88,9 @@ class SavingsAccount(BankAccount):
         """Must extend (not fully rewrite) the parent's __repr__ — start from
         super().__repr__() and add the interest rate to it.
         """
-        # TODO
-        raise NotImplementedError
+        # Done
+        return super().__repr__() + \
+               f", interest_rate={self.interest_rate}"
 
 
 class Bank:
