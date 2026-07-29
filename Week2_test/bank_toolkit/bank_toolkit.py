@@ -51,11 +51,11 @@ class BankAccount:
         """
         # DONE
         if amount> self.balance:
-            logger.warning(f"Your requested amount {amount} is more than your current balance which is {self.balance}")
+            logger.warning(f"Your requested amount {amount} is insufficient, your current balance is {self.balance}")
             raise InsufficientFundsError("Your Balance is Low")
             
         self.balance-=amount
-        logger.info(f"Sucessfully withdrawl {amount}, now current balance is {self.balance}")
+        logger.info(f"Sucessfully Withdrawn {amount}, now current balance is {self.balance}")
 
     def __repr__(self) -> str:
         """Must include the owner and the balance in the string."""
@@ -65,6 +65,9 @@ class BankAccount:
     def __eq__(self, other: object) -> bool:
         """Two BankAccounts are equal if owner and balance both match."""
         # Done
+        if not isinstance(other, BankAccount):
+            return False
+
         return self.owner == other.owner and self.balance == other.balance
 
 
@@ -135,12 +138,12 @@ def save_accounts(path: Path, accounts: list[BankAccount]) -> None:
     class later — include a "type" field ("BankAccount" or "SavingsAccount")
     plus owner/balance/interest_rate as applicable.
     """
-    base = Path(__file__).parent
-    path = base / Path(path)
+    # base = Path(__file__).parent
+    # path = base / Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     data = [to_dict(account) for account in accounts]
     with path.open("w") as f:
-        json.dump(data, f)
+        json.dump(data, f, indent=4)
 
 
 def load_accounts(path: Path) -> list[BankAccount]:
@@ -149,8 +152,8 @@ def load_accounts(path: Path) -> list[BankAccount]:
     FileNotFoundError propagate — do not swallow it.
     """
     # Done
-    base = Path(__file__).parent
-    path = base / Path(path)
+    # base = Path(__file__).parent
+    # path = base / Path(path)
     with path.open("r") as f:
         data = json.load(f)
 
@@ -158,11 +161,7 @@ def load_accounts(path: Path) -> list[BankAccount]:
     for i in data:
         if i.get("type")=="SavingsAccount":
             accounts.append(
-                SavingsAccount(
-                    i["owner"],
-                    i["balance"],
-                    i.get("interest_rate", 0.0),
-                )
+                SavingsAccount(i["owner"], i["balance"], i.get("interest_rate", 0.0))
             )
         else:
             accounts.append(BankAccount(i["owner"], i["balance"]))
@@ -223,9 +222,28 @@ async def apply_interest_async(accounts: list[SavingsAccount]) -> None:
     confirmation step, then call apply_interest() on it. Run every account's
     confirmation concurrently using asyncio.gather — not a sequential loop.
     """
-    # TODO
-    raise NotImplementedError
+    # Done
+    async def apply(account: SavingsAccount):
+        await asyncio.sleep(0.05)
+        account.apply_interest()
+    await asyncio.gather(
+        *(apply(acc) for acc in accounts)
+    )
 
+
+# fetch_rates_concurrently
+"""
+I used ThreadPoolExecutor to submit every fetch request as a separate task.
+Each task runs concurrently, and I collect results using future.result().
+If one task fails, I log a warning and continue processing the remaining tasks.
+"""
+
+# apply_interest_async
+"""
+Each account has its own async coroutine that waits for a simulated
+confirmation using asyncio.sleep(0.05) before applying interest.
+asyncio.gather() runs all these coroutines concurrently instead of sequentially.
+"""
 
 def main():
     logging.basicConfig(
