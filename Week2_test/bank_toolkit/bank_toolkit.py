@@ -74,8 +74,9 @@ class SavingsAccount(BankAccount):
         reimplementing balance validation — a negative starting balance must
         still be rejected the same way it is for a plain BankAccount.
         """
-        # TODO
-        raise NotImplementedError
+        # Done
+        super().__init__(owner, balance)
+        self.interest_rate = interest_rate
 
     def apply_interest(self) -> None:
         """balance += balance * interest_rate."""
