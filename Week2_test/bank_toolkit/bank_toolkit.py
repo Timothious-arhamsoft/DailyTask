@@ -135,8 +135,8 @@ def save_accounts(path: Path, accounts: list[BankAccount]) -> None:
     class later — include a "type" field ("BankAccount" or "SavingsAccount")
     plus owner/balance/interest_rate as applicable.
     """
-
-    path = Path(path)
+    base = Path(__file__).parent
+    path = base / Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     data = [to_dict(account) for account in accounts]
     with path.open("w") as f:
@@ -149,9 +149,10 @@ def load_accounts(path: Path) -> list[BankAccount]:
     FileNotFoundError propagate — do not swallow it.
     """
     # Done
-    path = Path(path)
+    base = Path(__file__).parent
+    path = base / Path(path)
     with path.open("r") as f:
-        data = json.loads(f)
+        data = json.load(f)
 
     accounts: list[BankAccount] =  []
     for i in data:
@@ -213,3 +214,50 @@ async def apply_interest_async(accounts: list[SavingsAccount]) -> None:
     """
     # TODO
     raise NotImplementedError
+
+
+def main():
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(levelname)s: %(message)s"
+    )
+
+
+    file_name = Path("data/accounts.json")
+
+
+    account = BankAccount("Tim", 1000)
+    account.deposit(500)
+    try:
+        account.withdraw(300)
+    except InsufficientFundsError as e:
+        logger.warning(e)
+
+    bank = Bank()
+    bank.add_account(account)
+
+    print("Bank Accounts:")
+    print(bank.accounts)
+
+    print("\nTotal Assets:")
+    print(bank.total_assets())
+
+    print("\nSummary by Owner:")
+    print(bank.summary_by_owner())
+
+    # Save 
+    save_accounts(file_name, bank.accounts)
+    print(f"\nAccounts saved to {file_name}")
+
+    # Load 
+    loaded_accounts = load_accounts(file_name)
+    print("\nLoaded Accounts:")
+    for acc in loaded_accounts:
+        print(acc)
+
+    # Count account types
+    print("\nCount by Type:")
+    print(count_by_type(loaded_accounts))
+
+if __name__ == "__main__":
+    main()
