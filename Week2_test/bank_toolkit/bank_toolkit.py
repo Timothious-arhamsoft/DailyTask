@@ -59,13 +59,13 @@ class BankAccount:
 
     def __repr__(self) -> str:
         """Must include the owner and the balance in the string."""
-        # TODO
-        raise NotImplementedError
+        # Done
+        return f"BankAccount(owner={self.owner}, balance={self.balance})"
 
     def __eq__(self, other: object) -> bool:
         """Two BankAccounts are equal if owner and balance both match."""
-        # TODO
-        raise NotImplementedError
+        # Done
+        return self.owner == other.owner and self.balance == other.balance
 
 
 class SavingsAccount(BankAccount):
