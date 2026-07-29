@@ -117,6 +117,17 @@ class Bank:
             summary[account.owner]+=account.balance
         return dict(summary)
 
+# Helping Function
+def to_dict(account:BankAccount):
+    data = {
+        "type" : "SavingsAccount" if isinstance(account, SavingsAccount) else "BankAccount",
+        "owner" : account.owner,
+        "balance" : account.balance
+    }
+    if isinstance(account, SavingsAccount):
+        data["interest_rate"] = account.interest_rate
+    return data
+
 
 def save_accounts(path: Path, accounts: list[BankAccount]) -> None:
     """Write accounts as JSON to path (create parent directories if needed).
@@ -124,8 +135,12 @@ def save_accounts(path: Path, accounts: list[BankAccount]) -> None:
     class later — include a "type" field ("BankAccount" or "SavingsAccount")
     plus owner/balance/interest_rate as applicable.
     """
-    # TODO
-    raise NotImplementedError
+
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    data = [to_dict(account) for account in accounts]
+    with path.open("w") as f:
+        json.dump(data, f)
 
 
 def load_accounts(path: Path) -> list[BankAccount]:
@@ -133,24 +148,41 @@ def load_accounts(path: Path) -> list[BankAccount]:
     correct class based on its "type" field. If the file doesn't exist, let
     FileNotFoundError propagate — do not swallow it.
     """
-    # TODO
-    raise NotImplementedError
+    # Done
+    path = Path(path)
+    with path.open("r") as f:
+        data = json.loads(f)
+
+    accounts: list[BankAccount] =  []
+    for i in data:
+        if i.get("type")=="SavingsAccount":
+            accounts.append(
+                SavingsAccount(
+                    i["owner"],
+                    i["balance"],
+                    i.get("interest_rate", 0.0),
+                )
+            )
+        else:
+            accounts.append(BankAccount(i["owner"], i["balance"]))
+    return accounts
 
 
 def count_by_type(accounts: list[BankAccount]) -> Counter:
     """Counter mapping class name to how many accounts of that type are in
     the list.
     """
-    # TODO
-    raise NotImplementedError
+    # Done
+    return Counter(type(account).__name__ for account in accounts)
+
 
 
 def is_business_hours(dt: datetime) -> bool:
     """True if dt falls on a weekday (Monday-Friday) between 9:00 (inclusive)
     and 17:00 (exclusive) — hour 9 through hour 16 count, hour 17 does not.
     """
-    # TODO
-    raise NotImplementedError
+    # Done
+    return dt.weekday() < 5 and 9<=dt.hour<17
 
 
 def apply_interest_to_all(accounts: list[SavingsAccount]) -> None:
