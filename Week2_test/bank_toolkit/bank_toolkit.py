@@ -205,8 +205,17 @@ def fetch_rates_concurrently(symbols: list[str], fetch_fn: Callable[[str], float
     a given symbol, log a warning and exclude that symbol from the result —
     one failure must not crash the whole batch.
     """
-    # TODO
-    raise NotImplementedError
+    # Done
+    results = {}
+    with ThreadPoolExecutor() as executor:
+        future_to_symbol = {executor.submit(fetch_fn, symbol): symbol for symbol in symbols}
+        for i in future_to_symbol:
+            symbol = future_to_symbol[i]
+            try:
+                results[symbol] = i.result()
+            except Exception as e:
+                logger.warning("Failed to fetch rate for %s: %s", symbol, e)
+    return results
 
 
 async def apply_interest_async(accounts: list[SavingsAccount]) -> None:
@@ -260,6 +269,22 @@ def main():
     # Count account types
     print("\nCount by Type:")
     print(count_by_type(loaded_accounts))
+
+    sv_accounts = [
+    SavingsAccount("Tim", 1000, 0.10),
+    SavingsAccount("Alice", 2000, 0.05),
+    SavingsAccount("Bob", 500, 0.20),
+    ]
+
+    print("Before:")
+    for sv_acc in sv_accounts:
+        print(sv_acc)
+    apply_interest_to_all(sv_accounts)
+    print("After:")
+    for sv_acc in sv_accounts:
+        print(sv_acc)
+
+    
 
 if __name__ == "__main__":
     main()
