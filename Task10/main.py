@@ -132,7 +132,7 @@ class TaskV1(BaseModel):
     completed : bool = False
 
 @task_router.post("", status_code=201)
-async def create_task_v2(task: TaskV1):
+async def create_task_v1(task: TaskV1):
     new_task_id =  max(tasks_v1.keys(), default=0) + 1
 
     tasks_v1[new_task_id] = {
