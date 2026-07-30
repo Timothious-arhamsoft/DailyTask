@@ -39,6 +39,7 @@ class Task(BaseModel):
     title: str
     completed : bool = False
 tasks = {}
+tasks_v1 = {}
 
 #-----------------------------------------
 # 1: Get all tasks
@@ -56,7 +57,7 @@ async def get_task(task_id:int):
 # 3: Createing task
 @app.post("/tasks", status_code=201)
 async def post_task(task: Task):
-    new_task_id = len(tasks) + 1
+    new_task_id = max(tasks.keys(), default=0) + 1
     tasks[new_task_id] = {
     "id": new_task_id,
     **task.model_dump()
@@ -78,7 +79,7 @@ async def put_task(task_id:int, task: Task):
 @app.delete("/tasks/{task_id}", status_code=204)
 async def delete_task(task_id:int):
     if task_id not in tasks:
-        raise HTTPException(status_code=404, detail="Task not fount")
+        raise HTTPException(status_code=404, detail="Task not found")
     del tasks[task_id]
     return Response(status_code=status.HTTP_204_NO_CONTENT)
 #-----------------------------------------
@@ -132,14 +133,14 @@ class TaskV1(BaseModel):
 
 @task_router.post("", status_code=201)
 async def create_task_v2(task: TaskV1):
-    new_task_id = len(tasks) + 1
+    new_task_id =  max(tasks_v1.keys(), default=0) + 1
 
-    tasks[new_task_id] = {
+    tasks_v1[new_task_id] = {
         "id": new_task_id,
         **task.model_dump()
     }
 
-    return tasks[new_task_id]
+    return tasks_v1[new_task_id]
 
 app.include_router(task_router)
 
