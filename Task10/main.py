@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Response, status
+from fastapi import FastAPI, HTTPException, Response, status, APIRouter
 
 # Task 1: fastapi uvicorn
 app = FastAPI()
@@ -115,7 +115,25 @@ url: http://127.0.0.1:8000/docs
 * Connection #0 to host 127.0.0.1 left intact
 
 '''
+# Task 5: Api Versioning
+task_router = APIRouter(prefix="/api/v2/tasks", tags=["Tasks"])
 
+class TaskV2(BaseModel):
+    name: str
+    completed : bool = False
+
+@task_router.post("", status_code=201)
+async def create_task_v2(task: TaskV2):
+    new_task_id = len(tasks) + 1
+
+    tasks[new_task_id] = {
+        "id": new_task_id,
+        **task.model_dump()
+    }
+
+    return tasks[new_task_id]
+
+app.include_router(task_router)
 
 def main():
     task2()
