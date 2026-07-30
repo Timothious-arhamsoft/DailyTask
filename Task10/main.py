@@ -135,6 +135,17 @@ async def create_task_v2(task: TaskV2):
 
 app.include_router(task_router)
 
+
+# Task 6: syncio lesson concrete
+import asyncio
+@app.get("/slow")
+async def slow_endpoint():
+    await asyncio.sleep(2)
+
+    return {
+        "message": "Finished after 2 seconds"
+    }
+
 def main():
     task2()
 
