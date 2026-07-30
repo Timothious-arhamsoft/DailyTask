@@ -116,14 +116,22 @@ url: http://127.0.0.1:8000/docs
 
 '''
 # Task 5: Api Versioning
-task_router = APIRouter(prefix="/api/v2/tasks", tags=["Tasks"])
+task_router = APIRouter(prefix="/api/v1/tasks", tags=["Tasks"])
 
-class TaskV2(BaseModel):
+# if v2 needed to rename a field without breaking existing v1 clients, what would you actually do?
+'''
+I would keep /api/v1/tasks unchanged for existing clients and create a separate /api/v2/tasks 
+endpoint with the renamed field so both versions can run during migration.
+
+'''
+
+
+class TaskV1(BaseModel):
     name: str
     completed : bool = False
 
 @task_router.post("", status_code=201)
-async def create_task_v2(task: TaskV2):
+async def create_task_v2(task: TaskV1):
     new_task_id = len(tasks) + 1
 
     tasks[new_task_id] = {
