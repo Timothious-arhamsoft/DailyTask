@@ -8,6 +8,25 @@ import sqlite3
 from datetime import datetime
 from pathlib import Path
 
+# Task 7: API Key vs JWT, Oauth and RBAC
+
+'''
+API Key vs JWT:
+An API key is a simple static secret used to identify a client.
+A JWT is a signed token that contains claims about a user and can
+be verified without storing session data on the server.
+
+OAuth:
+OAuth is a delegation protocol. letting an app act on your behalf with another 
+service (e.g. “use my Google account”) without ever handing that app your actual password.
+
+RBAC:
+RBAC (Role-Based Access Control) assigns users roles such as admin, editor,
+or viewer and checks permissions based on those roles.
+It is more flexible than a single is_admin boolean because it supports
+multiple levels of access and different permissions for different roles.
+'''
+
 
 # Creating the database
 # Task 2: Replaced Dictionary with SQLite
