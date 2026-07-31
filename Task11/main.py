@@ -1,15 +1,24 @@
 # Task1: Added and run the Task 10 main.py
 # Command: uvicorn Task11.main:app --reload
-from fastapi import FastAPI, HTTPException, Response, status
+import os
+from dotenv import load_dotenv
+from fastapi import FastAPI, HTTPException, Response, status, Header, Depends
 from pydantic import BaseModel
 import sqlite3
 from datetime import datetime
 from pathlib import Path
 
+
 # Creating the database
 # Task 2: Replaced Dictionary with SQLite
 BASE_DIR = Path(__file__).resolve().parent
 db = BASE_DIR / "tasks.db"
+
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
+
+if API_KEY is None:
+    raise RuntimeError("API_KEY is not set")
 
 def make_connection():
     conn = sqlite3.connect(db)
@@ -39,6 +48,15 @@ def init_db():
 
 app = FastAPI()
 init_db()
+
+def verify_api_key(
+    x_api_key: str = Header(...)
+):
+    if x_api_key != API_KEY:
+        raise HTTPException(
+            status_code=401,
+            detail="Invalid API Key"
+        )
 
 @app.get("/")
 async def home():
@@ -123,7 +141,7 @@ async def get_task(task_id:int):
 
 # 3: Createing task
 @app.post("/tasks", status_code=201)
-async def post_task(task: Task):
+async def post_task(task: Task, _: None = Depends(verify_api_key)):
 
     conn = make_connection()
     cursor = conn.cursor()
@@ -155,7 +173,7 @@ async def post_task(task: Task):
 
 # 4: UPdate task
 @app.put("/tasks/{task_id}")
-async def put_task(task_id:int, task:Task):
+async def put_task(task_id:int, task:Task, _: None = Depends(verify_api_key)):
 
     conn = make_connection()
     cursor = conn.cursor()
@@ -188,7 +206,7 @@ async def put_task(task_id:int, task:Task):
 
 # 5: Delete task
 @app.delete("/tasks/{task_id}", status_code=204)
-async def delete_task(task_id:int):
+async def delete_task(task_id:int, _: None = Depends(verify_api_key)):
 
     conn = make_connection()
     cursor = conn.cursor()
