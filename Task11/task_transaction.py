@@ -1,3 +1,4 @@
+# Task 7: Transaction kata 
 import sqlite3
 from pathlib import Path
 

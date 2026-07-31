@@ -8,7 +8,7 @@ import sqlite3
 from datetime import datetime
 from pathlib import Path
 
-# Task 7: API Key vs JWT, Oauth and RBAC
+# Task 8: API Key vs JWT, Oauth and RBAC
 
 '''
 API Key vs JWT:
@@ -88,9 +88,9 @@ class Task(BaseModel):
     completed : bool = False
 
 
-# Task 3: Change Every Endpoint
+# Task 4: Change Every Endpoint
 #-----------------------------------------
-# 1: Get all tasks
+#  Get all tasks
 @app.get("/tasks")
 async def get_tasks():
 
@@ -121,7 +121,7 @@ async def get_tasks():
         for row in rows
     ]
 
-# 2: Task according to id
+# Task according to id
 @app.get("/tasks/{task_id}")
 async def get_task(task_id:int):
 
@@ -158,8 +158,9 @@ async def get_task(task_id:int):
     }
 
 
-# 3: Createing task
+# Createing task
 @app.post("/tasks", status_code=201)
+# Task 5: API-key dependency guarding 
 async def post_task(task: Task, _: None = Depends(verify_api_key)):
 
     conn = make_connection()
@@ -190,7 +191,7 @@ async def post_task(task: Task, _: None = Depends(verify_api_key)):
         "created_at": created_at
     }
 
-# 4: UPdate task
+# UPdate task
 @app.put("/tasks/{task_id}")
 async def put_task(task_id:int, task:Task, _: None = Depends(verify_api_key)):
 
@@ -223,7 +224,7 @@ async def put_task(task_id:int, task:Task, _: None = Depends(verify_api_key)):
         "completed": task.completed
     }
 
-# 5: Delete task
+# Delete task
 @app.delete("/tasks/{task_id}", status_code=204)
 async def delete_task(task_id:int, _: None = Depends(verify_api_key)):
 

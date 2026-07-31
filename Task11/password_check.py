@@ -1,3 +1,4 @@
+# Task 6: Password hashed 
 from passlib.hash import bcrypt
 
 password = "Admin123"
