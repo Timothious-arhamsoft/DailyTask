@@ -7,12 +7,12 @@ from dotenv import load_dotenv
 import os
 from datetime import datetime
 
-from .db.database import get_db, engine, Base
-from .models.models import Task, Category
-from .schemas.schemas import ( TaskCreate, TaskUpdate, TaskResponse, CategoryCreate, CategoryResponse )
+from db.database import get_db, engine, Base
+from models.models import Task, Category
+from schemas.schemas import ( TaskCreate, TaskUpdate, TaskResponse, CategoryCreate, CategoryResponse )
 
 load_dotenv()
-Base.metadata.create_all(bind=engine)
+# Base.metadata.create_all(bind=engine)
 app = FastAPI(title="Task API – ORM Day")
 
 # Auth
