@@ -46,3 +46,8 @@ class NoteUpdateSchema(BaseModel):
     title: Optional[str] = Field(min_length=1, max_length=200)
     body: Optional[str] = None
     category_id: Optional[int] = None
+
+class LoginSchema(BaseModel):
+    email: EmailStr
+    password: str
+
