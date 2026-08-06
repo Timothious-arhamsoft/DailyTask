@@ -47,7 +47,14 @@ class NoteUpdateSchema(BaseModel):
     body: Optional[str] = None
     category_id: Optional[int] = None
 
+
+# --Login and Token
 class LoginSchema(BaseModel):
     email: EmailStr
     password: str
+
+
+class TokenSchema(BaseModel):
+    access_token: str
+    token_type: str
 
