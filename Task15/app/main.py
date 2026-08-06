@@ -1,3 +1,4 @@
+# Checking Docker
 from fastapi import FastAPI
 from app.routers.notes import router as notes_router
 from app.routers.users import router as users_router
