@@ -1,5 +1,8 @@
 import logging
 from pathlib import Path
+from collections import Counter, defaultdict, namedtuple, OrderedDict
+from datetime import datetime
+import json
 # Types of Formating
 
 # 1) Dynamic Typing
@@ -69,3 +72,103 @@ print(source)
 print(source.exists())
 if source.exists() and not destination.exists():
     source.replace(destination)
+
+# Counter
+sample = ["A", "B", "C", "D", "E", "A", "C"]
+print(Counter(sample))
+
+# Defaultdict
+d = defaultdict(list)
+d["Fruit"].append("Apple")
+print(d)
+namedtuple
+# PathLib
+path = Path("data") / "test.txt"
+print(path)
+
+# Datetime
+today = datetime.now()
+print(today)
+print(type(today))
+
+# Logging Info
+logging.basicConfig(
+    level=logging.INFO,
+    force=True
+)
+logging.info("User Logged In")
+
+# Path
+base = Path(__file__).parent
+print(base)
+
+data = [
+    {"name": "Ali", "age": 20},
+    {"name": "Sara", "age": 22}
+]
+
+# Created File
+# path = base / Path("students.json")
+# path.write_text(json.dumps(data, indent=4))
+
+# Load File
+load_file = base / Path("students.json")
+students = json.loads(load_file.read_text())
+print(students)
+
+# Transaction
+transaction = {
+    "amount": 500,
+    "time": datetime.now().isoformat()
+}
+
+print(transaction)
+
+categories = [
+    "Food",
+    "Bills",
+    "Food",
+    "Travel",
+    "Food"
+]
+
+print(Counter(categories))
+
+def custom_divmod(x,y):
+    Divmod = namedtuple("Divmod", "quotient remainder")
+    print("Div: ", Divmod)
+    return Divmod(*divmod(x,y))
+
+result = custom_divmod(12,5)
+print(result)
+print("Quotient: ",result.quotient)
+print("Remainder: ",result.remainder)
+
+Point = namedtuple("Point", ["x","y"])
+points = Point(2,4)
+print(points)
+print("x:", points.x)
+print("y:", points.y)
+
+pets = [
+    ("dog", "Affenpinscher"),
+    ("dog", "Terrier"),
+    ("dog", "Boxer"),
+    ("cat", "Abyssinian"),
+    ("cat", "Birman"),
+]
+
+# group_pets = defaultdict(pets)
+# print("Group: ",group_pets)
+
+letters = OrderedDict(b=2, d=4, a=1, c=3)
+print("Letters: ", letters)
+
+class LowerDict(dict):
+    def __setitem__(self, key, value):
+        key = key.lower()
+        super().__setitem__(key, value)
+
+ordinals = LowerDict({"First": 1, "Second": 2})
+ordinals["Third"] = 3
+print(ordinals)

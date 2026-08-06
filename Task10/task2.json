@@ -1,0 +1,32 @@
+[
+  {
+    "operation": "List all",
+    "method": "GET",
+    "url": "/tasks",
+    "success_status": "200 OK"
+  },
+  {
+    "operation": "Get one",
+    "method": "GET",
+    "url": "/tasks/{id}",
+    "success_status": "200 OK, or maybe 404 if not found"
+  },
+  {
+    "operation": "Create",
+    "method": "POST",
+    "url": "/tasks",
+    "success_status": "201 Created"
+  },
+  {
+    "operation": "Update",
+    "method": "PUT",
+    "url": "/tasks/{id}",
+    "success_status": "200 OK, or maybe 404 if not found"
+  },
+  {
+    "operation": "Delete",
+    "method": "DELETE",
+    "url": "/tasks/{id}",
+    "success_status": "204 No Content, or maybe 404 if not found"
+  }
+]
