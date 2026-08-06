@@ -5,7 +5,7 @@ from typing import Optional
 # --User
 class UserCreateSchema(BaseModel):
     username: str = Field(min_length=3, max_length=50)
-    email: EmailStr = Field(max_length=100)
+    email: EmailStr 
     password: str = Field(min_length=8)
 
 class UserResponseSchema(BaseModel):
