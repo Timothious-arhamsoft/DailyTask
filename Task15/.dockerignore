@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+notes.db
+.git/
+.gitignore
+alembic/versions/__pycache__/
