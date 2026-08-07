@@ -1,3 +1,50 @@
-git rm -r --cached __pycache__
-git rm -r --cached .pytest_cache
-git rm -r --cached .vscode
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Alembic / temporary files
+*.log
+
+# Testing / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# IDE / editors
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Pg data
+pgdata/
