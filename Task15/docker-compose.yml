@@ -5,9 +5,10 @@ services:
       POSTGRES_USER: notes_user
       POSTGRES_PASSWORD: notes_pass
       POSTGRES_DB: notes_db
+    ports:
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
-
 
   api:
     build: .
