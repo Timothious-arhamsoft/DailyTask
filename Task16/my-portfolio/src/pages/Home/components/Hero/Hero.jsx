@@ -1,8 +1,7 @@
-import React from 'react'
 import heroBg from '../../../../assets/hero-bg.jpg'
 import './Hero.css'
 
-export const Hero = () => {
+export function Hero() {
   return (
     <section 
       className="hero-section"

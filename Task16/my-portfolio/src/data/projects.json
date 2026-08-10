@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "Notes API & Auth System",
+    "description": "A lightweight RESTful CRUD API built with FastAPI and JWT authentication for secure user notes management.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "JWT"
+    ],
+    "link": "https://github.com/Timothious-arhamsoft"
+  },
+  {
+    "id": 2,
+    "title": "Dockerized FastAPI Notes API",
+    "description": "A containerized REST API for managing notes, connected to PostgreSQL and configured with Docker Compose and database migrations.",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "Docker Compose",
+      "Alembic"
+    ],
+    "link": "https://github.com/Timothious-arhamsoft"
+  },
+  {
+    "id": 3,
+    "title": "React Portfolios",
+    "description": "A responsive frontend application built with React and modern JavaScript and TypeScript, focused on reusable components, structured data, and an accessible user interface.",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS"
+    ],
+    "link": "https://github.com/Timothious-arhamsoft"
+  }
+]

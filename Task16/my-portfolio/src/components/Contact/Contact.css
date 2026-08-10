@@ -1,0 +1,151 @@
+.contact-section {
+  padding: 5rem 2rem;
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: 650px;
+  width: 100%;
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--text-white);
+}
+
+.contact-subtitle {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: #141417;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-dark);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-white);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-dark);
+  background-color: #1f1f23;
+  color: var(--text-white);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.form-group textarea {
+  resize: vertical;
+  max-width: 100%;
+  min-height: 120px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--orange-primary);
+}
+
+.form-fieldset {
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+.form-fieldset legend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-white);
+  padding: 0 0.5rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.radio-label,
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.radio-label input,
+.checkbox-label input {
+  accent-color: var(--orange-primary);
+  cursor: pointer;
+}
+
+.checkbox-group {
+  margin-top: 0.25rem;
+}
+
+.btn-submit {
+  background-color: var(--orange-primary);
+  color: var(--text-white);
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+  background-color: var(--orange-hover);
+}
+
+.btn-submit:active {
+  transform: scale(0.99);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 3.5rem 1.25rem;
+  }
+
+  .contact-form {
+    padding: 1.5rem;
+  }
+}

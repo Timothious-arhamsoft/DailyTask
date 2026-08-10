@@ -1,7 +1,6 @@
-import React from 'react'
 import './About.css'
 
-export const About = () => {
+export function About () {
   return (
     <section className="about-section" id="about">
       <div className="about-container">

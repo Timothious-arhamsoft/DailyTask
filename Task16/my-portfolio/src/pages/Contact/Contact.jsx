@@ -1,11 +1,10 @@
-import React from 'react'
+import { Contact as ContactComponent } from '../../components'
 
-const Contact = () => {
+export function Contact() {
   return (
-    <div style={{ padding: '4rem 2rem', textAlign: 'center' }}>
-      <h1>Contact Page</h1>
+    <div className="contact-page">
+      <ContactComponent />
     </div>
   )
 }
 
-export default Contact

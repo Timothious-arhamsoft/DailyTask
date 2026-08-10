@@ -1,7 +1,6 @@
-import React from 'react'
 import './Skills.css'
 
-export const Skills = () => {
+export function Skills () {
   const skillsList = [
     'React.js & Full-Stack Web Engineering',
     'AI & Intelligent Systems Development',

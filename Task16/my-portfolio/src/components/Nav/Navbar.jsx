@@ -1,8 +1,7 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
-export const Navbar = () => {
+export function Navbar() {
   return (
     <header className="navbar-header">
       <div className="navbar-container">
@@ -16,6 +15,12 @@ export const Navbar = () => {
             className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}
           >
             Home
+          </NavLink>
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => isActive ? 'nav-item active' : 'nav-item'}
+          >
+            Projects
           </NavLink>
           <NavLink 
             to="/contact" 
