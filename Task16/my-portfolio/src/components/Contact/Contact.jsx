@@ -1,6 +1,18 @@
+import { useState } from 'react'
+import { Notification } from '../Notification/Notification'
 import './Contact.css'
 
 export function Contact() {
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setSubmitted(true)
+    setTimeout(() => {
+      setSubmitted(false)
+    }, 5000)
+  }
+
   return (
     <section id="contact" className="contact-section" aria-labelledby="contact-heading">
       <div className="contact-container">
@@ -9,7 +21,14 @@ export function Contact() {
           Have a question or want to work together? Send me a message below!
         </p>
 
-        <form method="post" className="contact-form">
+        {submitted && (
+          <Notification
+            message="Thank you! Your message has been sent successfully."
+            type="success"
+          />
+        )}
+
+        <form onSubmit={handleSubmit} className="contact-form">
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input
@@ -110,5 +129,3 @@ export function Contact() {
     </section>
   )
 }
-
-
