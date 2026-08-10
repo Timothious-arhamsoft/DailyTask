@@ -28,6 +28,12 @@
   color: var(--orange-primary);
 }
 
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
 .navbar-links {
   display: flex;
   align-items: center;
@@ -39,7 +45,6 @@
   font-weight: 500;
   color: var(--text-muted);
   transition: color 0.2s ease;
-  position: relative;
 }
 
 .nav-item:hover {
@@ -48,6 +53,7 @@
 
 .nav-item.active {
   color: var(--orange-primary);
+  font-weight: 600;
 }
 
 .btn-orange {
@@ -59,6 +65,7 @@
   font-size: 0.9rem;
   font-weight: 600;
   transition: background-color 0.2s ease, transform 0.1s ease;
+  white-space: nowrap;
 }
 
 .btn-orange:hover {
@@ -67,4 +74,79 @@
 
 .btn-orange:active {
   transform: scale(0.98);
+}
+
+/* Hamburger button - hidden on desktop */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1010;
+}
+
+.hamburger-bar {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-white);
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+/* Hamburger animation when open */
+.hamburger-btn.open .hamburger-bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger-btn.open .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-btn.open .hamburger-bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Responsive breakpoint < 600px */
+@media (max-width: 600px) {
+  .hamburger-btn {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0f0f11;
+    border-bottom: 1px solid var(--border-dark);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    display: none;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-action {
+    width: 100%;
+    text-align: center;
+  }
+
+  .btn-orange {
+    width: 100%;
+    text-align: center;
+  }
 }
