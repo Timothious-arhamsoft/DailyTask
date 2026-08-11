@@ -22,6 +22,9 @@
   font-weight: 700;
   color: var(--text-white);
   letter-spacing: -0.5px;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
 }
 
 .logo-dot {
@@ -31,13 +34,16 @@
 .navbar-menu {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  justify-content: space-between;
+  flex: 2;
 }
 
 .navbar-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 2rem;
+  flex: 1;
 }
 
 .nav-item {
@@ -54,6 +60,13 @@
 .nav-item.active {
   color: var(--orange-primary);
   font-weight: 600;
+}
+
+.navbar-action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .btn-orange {
@@ -111,6 +124,10 @@
 
 /* Responsive breakpoint < 600px */
 @media (max-width: 600px) {
+  .navbar-logo {
+    flex: initial;
+  }
+
   .hamburger-btn {
     display: flex;
   }
@@ -127,6 +144,7 @@
     gap: 1.5rem;
     display: none;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    flex: initial;
   }
 
   .navbar-menu.open {
@@ -138,11 +156,15 @@
     gap: 1.25rem;
     width: 100%;
     text-align: center;
+    flex: initial;
+    justify-content: center;
   }
 
   .navbar-action {
     width: 100%;
     text-align: center;
+    flex: initial;
+    justify-content: center;
   }
 
   .btn-orange {
