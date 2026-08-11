@@ -5,6 +5,10 @@ A personal portfolio website built with **React and Vite** as part of my React l
 The project focuses on learning and applying React fundamentals such as **JSX, components, component composition, props, reusable components, JSON-based data, array mapping, forms, native validation, notifications, semantic HTML, accessibility, and basic CSRF considerations**.
 
 ---
+## 🔗 Day 16 Portfolio Repository
+
+GitHub:
+`https://github.com/Timothious-arhamsoft/DailyTask/tree/dev/Task16/my-portfolio`
 
 ## 📌 Project Overview
 
@@ -583,4 +587,4 @@ This structure demonstrates the basic React concept of building an interface thr
 
 GitHub:
 
-`https://github.com/Timothious-arhamsoft/DailyTask/tree/dev/Task16/my-portfolio`
+`https://github.com/Timothious-arhamsoft/DailyTask`
