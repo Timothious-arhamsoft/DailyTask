@@ -1,7 +1,25 @@
+import { useState } from 'react'
+import { Navbar, Footer } from './components/index.js'
+import {Login, Home} from './pages/index.js'
+
 function App() {
+  const [token, setToken] = useState(null)
+
+  function handleLoginSuccess(receivedToken) {
+    setToken(receivedToken)
+  }
+
   return (
-    <div>
-      <h1>Notes App</h1>
+    <div className="app-layout">
+      <Navbar />
+
+      {token ? (
+        <Home />
+      ) : (
+        <Login onLoginSuccess={handleLoginSuccess} />
+      )}
+
+      <Footer />
     </div>
   )
 }
