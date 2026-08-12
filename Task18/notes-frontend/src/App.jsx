@@ -14,7 +14,7 @@ function App() {
       <Navbar />
 
       {token ? (
-        <Home />
+        <Home token={token} onLogout={() => setToken(null)} />
       ) : (
         <Login onLoginSuccess={handleLoginSuccess} />
       )}
