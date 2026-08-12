@@ -1,5 +1,67 @@
-* {
+:root {
+  --clr-primary:       #f97316; 
+  --clr-primary-dark:  #ea6500;
+  --clr-primary-light: #ffb380;
+
+  --clr-accent:        #6366f1;   
+  --clr-accent-dark:   #4f52d9;
+
+  --clr-success:       #22c55e;
+  --clr-danger:        #ef4444;
+  --clr-warning:       #facc15;
+
+  /* Backgrounds */
+  --bg-page:    #fafafa;
+  --bg-surface: #ffffff;
+  --bg-muted:   #f3f4f6;
+
+  /* Borders */
+  --border:      #e5e7eb;
+  --border-dark: #d1d5db;
+
+  /* Text */
+  --text-white:  #ffffff;
+  --text-strong: #111827;
+  --text-body:   #374151;
+  --text-muted:  #9ca3af;
+
+  /* Navbar */
+  --nav-bg:    #f97316;
+  --nav-text:  #ffffff;
+  --nav-hover: rgba(255, 255, 255, 0.2);
+
+  --orange-primary: #f97316;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,0.18);
+}
+
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-body);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-layout > main,
+.app-layout > .login-page {
+  flex: 1;
+}
+

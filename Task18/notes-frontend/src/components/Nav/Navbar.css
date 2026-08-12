@@ -5,6 +5,7 @@
   display: flex;
   align-items: center;
   box-shadow: 0 2px 8px rgba(249, 115, 22, 0.25);
+  position: relative;
 }
 
 .navbar-container {
@@ -13,7 +14,7 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  position: relative;
 }
 
 .navbar-brand {
@@ -23,7 +24,11 @@
   letter-spacing: 0.3px;
 }
 
+/* Center the links within the full container width */
 .navbar-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 8px;
 }
