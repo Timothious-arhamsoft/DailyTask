@@ -1,4 +1,3 @@
-import React from 'react'
 import './Notes.css'
 
 export function NoteCard({ note, onEdit, onDelete }) {
