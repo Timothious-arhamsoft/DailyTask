@@ -43,9 +43,14 @@
   padding: 6px 14px;
   border-radius: 6px;
   transition: background 0.15s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
-.navbar-link:hover {
+.navbar-link:hover,
+.navbar-link.active {
   background: var(--nav-hover);
   color: #ffffff;
 }

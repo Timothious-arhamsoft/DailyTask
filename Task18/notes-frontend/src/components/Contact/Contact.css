@@ -1,0 +1,108 @@
+.contact-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+  margin: 0 auto;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.contact-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-strong);
+}
+
+.contact-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-submit-btn {
+  background-color: var(--clr-primary);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s, transform 0.1s;
+  width: 100%;
+  font-family: inherit;
+  margin-top: 8px;
+}
+
+.contact-submit-btn:hover:not(:disabled) {
+  background-color: var(--clr-primary-dark);
+}
+
+.contact-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success screen */
+.contact-success {
+  text-align: center;
+  padding: 30px 10px;
+}
+
+.success-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #dcfce7;
+  color: #15803d;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+
+.contact-success h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin-bottom: 8px;
+}
+
+.contact-success p {
+  color: var(--text-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.reset-btn {
+  background-color: transparent;
+  color: var(--clr-primary);
+  border: 1.5px solid var(--clr-primary);
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.reset-btn:hover {
+  background-color: #fff7ed;
+}

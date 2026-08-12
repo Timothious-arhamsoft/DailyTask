@@ -1,13 +1,27 @@
 import { useState } from 'react'
 import './Navbar.css'
 
-export function Navbar() {
+export function Navbar({ currentPage, onNavigate }) {
     const [isOpen, setIsOpen] = useState(false)
+
+    const handleNavigate = (e, page) => {
+        e.preventDefault()
+        if (onNavigate) {
+            onNavigate(page)
+        }
+        setIsOpen(false)
+    }
 
     return (
         <nav className="navbar">
             <div className="navbar-container">
-                <div className="navbar-brand">Notes App</div>
+                <div 
+                    className="navbar-brand" 
+                    onClick={(e) => handleNavigate(e, 'home')}
+                    style={{ cursor: 'pointer' }}
+                >
+                    Notes App
+                </div>
                 <button 
                     className={`navbar-toggle ${isOpen ? 'active' : ''}`} 
                     onClick={() => setIsOpen(!isOpen)}
@@ -19,9 +33,24 @@ export function Navbar() {
                 </button>
 
                 <div className={`navbar-links ${isOpen ? 'open' : ''}`}>
-                    <a href="#" className="navbar-link" onClick={() => setIsOpen(false)}>Home</a>
-                    <a href="#" className="navbar-link" onClick={() => setIsOpen(false)}>About</a>
-                    <a href="#" className="navbar-link" onClick={() => setIsOpen(false)}>Contact</a>
+                    <button 
+                        className={`navbar-link ${currentPage === 'home' ? 'active' : ''}`} 
+                        onClick={(e) => handleNavigate(e, 'home')}
+                    >
+                        Home
+                    </button>
+                    <button 
+                        className={`navbar-link ${currentPage === 'about' ? 'active' : ''}`} 
+                        onClick={(e) => handleNavigate(e, 'about')}
+                    >
+                        About
+                    </button>
+                    <button 
+                        className={`navbar-link ${currentPage === 'contact' ? 'active' : ''}`} 
+                        onClick={(e) => handleNavigate(e, 'contact')}
+                    >
+                        Contact
+                    </button>
                 </div>
             </div>
         </nav>

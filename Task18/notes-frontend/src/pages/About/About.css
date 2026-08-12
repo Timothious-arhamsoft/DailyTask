@@ -1,0 +1,22 @@
+.about-page {
+  padding: 60px 24px;
+}
+
+.about-container {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-strong);
+  margin-bottom: 16px;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
