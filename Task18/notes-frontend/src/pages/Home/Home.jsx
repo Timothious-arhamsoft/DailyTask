@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from 'react'
-import { fetchNotes, createNote, updateNote, deleteNote } from '../../api/notes'
+import { fetchNotes, fetchAllNotesAdmin, createNote, updateNote, deleteNote } from '../../api/notes'
 import { NoteForm, NoteList } from '../../components/index.js'
 import './Home.css'
+
+function decodeToken(token) {
+  try {
+    const payload = token.split('.')[1]
+    const json = atob(payload.replace(/-/g, '+').replace(/_/g, '/'))
+    return JSON.parse(json)
+  } catch {
+    return null
+  }
+}
+
 
 export default function Home({ token, onLogout }) {
   const [notes, setNotes] = useState([])
@@ -10,6 +21,13 @@ export default function Home({ token, onLogout }) {
   const [showCreateForm, setShowCreateForm] = useState(false)
   const [feedback, setFeedback] = useState(null)
 
+
+  const decoded = decodeToken(token)
+  const isAdmin = decoded?.role === 'admin'
+  console.log('decoded token payload:', decoded)
+  console.log('isAdmin:', isAdmin)
+
+  
   // Fetch all notes on component mount
   useEffect(() => {
     loadNotes()
@@ -19,7 +37,20 @@ export default function Home({ token, onLogout }) {
     setLoading(true)
     setFeedback(null)
     try {
-      const data = await fetchNotes(token)
+      let data
+      if (isAdmin) {
+        try {
+          data = await fetchAllNotesAdmin(token)
+        } catch (adminErr) {
+          if (adminErr.message.includes('403') || adminErr.message.includes('401')) {
+            data = await fetchNotes(token)
+          } else {
+            throw adminErr
+          }
+        }
+      } else {
+        data = await fetchNotes(token)
+      }
       setNotes(data)
     } catch (err) {
       setFeedback({
@@ -28,7 +59,6 @@ export default function Home({ token, onLogout }) {
         type: 'error'
       })
       if (err.message.includes('401') && onLogout) {
-        // Handle unauthorized token expiration
         setTimeout(() => onLogout(), 2000)
       }
     } finally {

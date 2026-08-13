@@ -14,6 +14,21 @@ export async function fetchNotes(token) {
   return res.json()
 }
 
+// GET /api/v1/admin/notes (Uses get_all_notes_admin on backend)
+// Returns: [{ id, title, body, owner_id, category_id, created_at, updated_at }, ...]
+export async function fetchAllNotesAdmin(token) {
+  const res = await fetch(`${API_URL}/api/v1/admin/notes`, {
+    headers: { Authorization: `Bearer ${token}` },
+  })
+
+  if (!res.ok) {
+    const data = await res.json().catch(() => ({}))
+    throw new Error(data.detail || `Failed to load admin notes (${res.status})`)
+  }
+
+  return res.json()
+}
+
 // POST /api/v1/notes/
 // Returns: { id, title, body, owner_id, ... }   
 export async function createNote(token, { title, body }) {
