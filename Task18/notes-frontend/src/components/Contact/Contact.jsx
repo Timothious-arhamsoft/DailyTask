@@ -28,7 +28,7 @@ export function Contact() {
     <div className="contact-card">
       <div className="contact-header">
         <h2 className="contact-title">Get in Touch</h2>
-        <p className="contact-subtitle">Have questions or feedback? We would love to hear from you.</p>
+        <p className="contact-subtitle">Have questions or feedback? I would love to hear from you.</p>
       </div>
 
       {submitted ? (
