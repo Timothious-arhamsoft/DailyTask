@@ -41,11 +41,13 @@ export function NoteCard({ note, isAdmin, currentUser, onEdit, onDelete }) {
         <h3 className="note-title">{note.title}</h3>
         {isAdmin && (
           <Badge 
-            label={authorName} 
+            label={isSelf ? 'Admin' : authorName} 
             variant={isSelf ? 'admin' : 'user'} 
-            icon={isSelf ? '👑' : '👤'} 
+            icon="👤" 
           />
         )}
+
+
       </div>
       <div className="note-card-body">
         <p className="note-body-text">{note.body}</p>
