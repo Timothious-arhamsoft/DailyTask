@@ -44,7 +44,12 @@ class Note(Base):
     owner = relationship("User", back_populates="notes")
     category = relationship("Category", back_populates="notes")
 
+    @property
+    def username(self):
+        return self.owner.username if self.owner else None
+
     def __repr__(self):
         return f"<Note(title='{self.title}', created_at='{self.created_at}')>"
+
 
     

@@ -47,7 +47,9 @@ def login(
     access_token = create_access_token(
         subject=user.id,
         role=user.role,
+        username=user.username,
     )
+
 
     return TokenSchema(
         access_token=access_token,

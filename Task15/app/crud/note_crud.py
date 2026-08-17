@@ -1,16 +1,17 @@
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, joinedload
 
 from app.models.models import Note
 from app.schemas.schemas import NoteCreateSchema, NoteUpdateSchema
 
 
 def get_all_notes(db: Session, owner_id: int):
-    return db.query(Note).filter(Note.owner_id == owner_id).all()
+    return db.query(Note).options(joinedload(Note.owner)).filter(Note.owner_id == owner_id).all()
 
 
 def get_note_by_id(db: Session, note_id: int, owner_id: int):
     return (
         db.query(Note)
+        .options(joinedload(Note.owner))
         .filter(
             Note.id == note_id,
             Note.owner_id == owner_id,
@@ -66,4 +67,4 @@ def delete_note(
     db.commit()
     
 def get_all_notes_admin(db: Session):
-    return db.query(Note).all()
+    return db.query(Note).options(joinedload(Note.owner)).all()

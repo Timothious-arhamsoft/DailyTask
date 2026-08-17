@@ -21,4 +21,17 @@ def get_all_notes(
     db: Session = Depends(get_db),
     current_user: User = Depends(require_admin),
 ):
-    return get_all_notes_admin(db)
+    notes = get_all_notes_admin(db)
+    return [
+        NoteResponseSchema(
+            id=note.id,
+            title=note.title,
+            body=note.body,
+            owner_id=note.owner_id,
+            username=note.owner.username if note.owner else None,
+            category_id=note.category_id,
+            created_at=note.created_at,
+            updated_at=note.updated_at,
+        )
+        for note in notes
+    ]

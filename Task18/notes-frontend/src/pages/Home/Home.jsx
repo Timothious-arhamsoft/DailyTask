@@ -14,15 +14,14 @@ function decodeToken(token) {
 }
 
 
-export default function Home({ token, onLogout }) {
+export default function Home({ token, user, onLogout }) {
   const [notes, setNotes] = useState([])
   const [loading, setLoading] = useState(true)
   const [noteBeingEdited, setNoteBeingEdited] = useState(null)
   const [showCreateForm, setShowCreateForm] = useState(false)
   const [feedback, setFeedback] = useState(null)
 
-
-  const decoded = decodeToken(token)
+  const decoded = user || decodeToken(token)
   const isAdmin = decoded?.role === 'admin'
   console.log('decoded token payload:', decoded)
   console.log('isAdmin:', isAdmin)
@@ -71,7 +70,12 @@ export default function Home({ token, onLogout }) {
     setFeedback(null)
     try {
       const response = await createNote(token, noteData)
-      const newNote = response.data
+      let newNote = response.data
+
+      // Ensure owner_id is set so badge displays correctly for admin immediately
+      if (!newNote.owner_id && (decoded?.sub || decoded?.id)) {
+        newNote = { ...newNote, owner_id: decoded.sub || decoded.id }
+      }
       
       // Update local state directly without refetching the whole list
       setNotes((prevNotes) => [newNote, ...prevNotes])
@@ -101,7 +105,7 @@ export default function Home({ token, onLogout }) {
 
       // Update the specific note locally in state without refetching the whole list
       setNotes((prevNotes) =>
-        prevNotes.map((n) => (n.id === updatedNote.id ? updatedNote : n))
+        prevNotes.map((n) => (n.id === updatedNote.id ? { ...n, ...updatedNote } : n))
       )
       setNoteBeingEdited(null)
 
@@ -233,6 +237,8 @@ export default function Home({ token, onLogout }) {
         ) : (
           <NoteList 
             notes={notes}
+            isAdmin={isAdmin}
+            currentUser={decoded}
             onEdit={(note) => {
               setShowCreateForm(false)
               setNoteBeingEdited(note)
@@ -246,3 +252,4 @@ export default function Home({ token, onLogout }) {
   )
 }
 export { Home }
+

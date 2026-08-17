@@ -39,7 +39,12 @@
 
 .note-card-header {
   margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
 }
+
 
 .note-title {
   font-size: 1.15rem;

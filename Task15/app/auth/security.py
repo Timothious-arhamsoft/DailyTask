@@ -19,10 +19,13 @@ def verify_password(plain: str, hashed: str) -> bool:
     return bcrypt.checkpw(plain.encode("utf-8"), hashed.encode("utf-8"))
  
  
-def create_access_token(subject: int, role: str) -> str:
+def create_access_token(subject: int, role: str, username: str = None) -> str:
     expire = datetime.now(timezone.utc) + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
     payload = {"sub": str(subject), "role": role, "exp": expire}
+    if username:
+        payload["username"] = username
     return jwt.encode(payload, SECRET_KEY, algorithm=ALGORITHM)
+
  
  
 def decode_access_token(token: str) -> dict[str, str]:

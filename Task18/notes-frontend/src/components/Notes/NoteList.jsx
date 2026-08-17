@@ -1,7 +1,7 @@
 import { NoteCard } from './NoteCard'
 import './Notes.css'
 
-export function NoteList({ notes, onEdit, onDelete }) {
+export function NoteList({ notes, isAdmin, currentUser, onEdit, onDelete }) {
   if (notes.length === 0) {
     return (
       <div className="notes-empty">
@@ -16,6 +16,8 @@ export function NoteList({ notes, onEdit, onDelete }) {
         <NoteCard
           key={note.id} // using real key from database
           note={note}
+          isAdmin={isAdmin}
+          currentUser={currentUser}
           onEdit={onEdit}
           onDelete={onDelete}
         />
@@ -23,3 +25,4 @@ export function NoteList({ notes, onEdit, onDelete }) {
     </div>
   )
 }
+

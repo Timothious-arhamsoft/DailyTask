@@ -37,10 +37,12 @@ class NoteResponseSchema(BaseModel):
     title: str
     body: Optional[str] = None
     owner_id: int
+    username: Optional[str] = None
     category_id: Optional[int] = None
     created_at: datetime
     updated_at: datetime
     model_config = ConfigDict(from_attributes=True)
+
 
 class NoteUpdateSchema(BaseModel):
     title: Optional[str] = Field(min_length=1, max_length=200)
