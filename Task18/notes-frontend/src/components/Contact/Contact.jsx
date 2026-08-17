@@ -73,7 +73,7 @@ export function Contact() {
               type="text"
               value={subject}
               onChange={(e) => setSubject(e.target.value)}
-              placeholder="How can we help?"
+              placeholder="How can I help?"
               required
             />
           </div>
