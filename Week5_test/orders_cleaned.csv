@@ -4,7 +4,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3,2024-01-01 02:00:00,1130.0,Apparel,4,41.6,West,False
 4,2024-01-01 03:00:00,1087.0,Apparel,5,26.26,South,False
 5,2024-01-01 04:00:00,1086.0,Apparel,2,39.45,West,False
-6,2024-01-01 05:00:00,1171.0,Books,6,-6.2,East,False
+6,2024-01-01 05:00:00,1171.0,Books,6,6.2,East,False
 7,2024-01-01 06:00:00,1017.0,Home Goods,5,22.44,North,False
 8,2024-01-01 07:00:00,1139.0,Books,2,74.28,North,False
 9,2024-01-01 08:00:00,1040.0,Apparel,7,61.61,East,False
@@ -91,7 +91,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 91,2024-01-04 18:00:00,1087.0,Books,2,39.54,West,False
 92,2024-01-04 19:00:00,1160.0,Electronics,7,7.18,East,False
 93,2024-01-04 20:00:00,1168.0,Electronics,5,33.35,West,False
-94,2024-01-04 21:00:00,1077.0,Books,2,-10.38,West,False
+94,2024-01-04 21:00:00,1077.0,Books,2,10.38,West,False
 95,2024-01-04 22:00:00,1179.0,Home Goods,6,49.82,East,False
 96,2024-01-04 23:00:00,1057.0,Electronics,6,61.2,East,False
 97,2024-01-05 00:00:00,1047.0,Apparel,7,26.77,East,False
@@ -133,7 +133,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 133,2024-01-06 12:00:00,1018.0,Home Goods,7,69.95,West,False
 134,2024-01-06 13:00:00,1111.0,Electronics,5,67.67,South,False
 135,2024-01-06 14:00:00,1158.0,Apparel,1,45.15,East,False
-136,2024-01-06 15:00:00,1060.0,Electronics,3,-1.73,West,False
+136,2024-01-06 15:00:00,1060.0,Electronics,3,1.73,West,False
 137,2024-01-06 16:00:00,1120.0,Home Goods,3,22.88,North,False
 138,2024-01-06 17:00:00,1006.0,Apparel,2,60.27,North,False
 139,2024-01-06 18:00:00,1069.0,Electronics,2,13.99,East,False
@@ -160,12 +160,12 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 161,2024-01-07 16:00:00,1199.0,Electronics,6,57.71,North,False
 162,2024-01-07 17:00:00,1132.0,Electronics,2,24.54,North,False
 163,2024-01-07 18:00:00,1081.0,Electronics,3,48.62,South,False
-164,2024-01-07 19:00:00,1081.0,Books,5,-2.48,East,False
+164,2024-01-07 19:00:00,1081.0,Books,5,2.48,East,False
 165,2024-01-07 20:00:00,1083.0,Electronics,4,33.52,North,False
 166,2024-01-07 21:00:00,1162.0,Electronics,3,64.22,East,False
 167,2024-01-07 22:00:00,1064.0,Apparel,3,42.5,South,False
 168,2024-01-07 23:00:00,1033.0,Electronics,1,47.36,East,False
-169,2024-01-08 00:00:00,1066.0,Electronics,7,-15.33,North,False
+169,2024-01-08 00:00:00,1066.0,Electronics,7,15.33,North,False
 170,2024-01-08 01:00:00,1004.0,Electronics,7,37.15,South,False
 171,2024-01-08 02:00:00,1021.0,Apparel,1,51.77,North,False
 173,2024-01-08 04:00:00,1154.0,Books,4,64.25,North,False
@@ -200,7 +200,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 203,2024-01-09 10:00:00,1099.0,Books,6,41.56,West,False
 204,2024-01-09 11:00:00,1139.0,Apparel,3,53.69,West,False
 205,2024-01-09 12:00:00,1091.0,Home Goods,5,14.94,South,False
-206,2024-01-09 13:00:00,1053.0,Home Goods,1,-7.77,East,False
+206,2024-01-09 13:00:00,1053.0,Home Goods,1,7.77,East,False
 207,2024-01-09 14:00:00,1152.0,Apparel,7,52.55,East,False
 208,2024-01-09 15:00:00,1193.0,Apparel,5,53.62,North,False
 209,2024-01-09 16:00:00,1052.0,Home Goods,6,54.51,South,False
@@ -249,7 +249,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 253,2024-01-11 12:00:00,1037.0,Apparel,5,50.32,North,False
 254,2024-01-11 13:00:00,1065.0,Home Goods,4,70.32,West,False
 255,2024-01-11 14:00:00,1132.0,Electronics,1,56.09,East,False
-256,2024-01-11 15:00:00,1028.0,Electronics,2,-6.99,East,True
+256,2024-01-11 15:00:00,1028.0,Electronics,2,6.99,East,True
 257,2024-01-11 16:00:00,1135.0,Electronics,6,57.83,West,False
 258,2024-01-11 17:00:00,1020.0,Electronics,7,33.84,South,False
 259,2024-01-11 18:00:00,1035.0,Apparel,4,54.06,North,False
@@ -323,7 +323,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 333,2024-01-14 20:00:00,1061.0,Electronics,4,72.49,South,False
 334,2024-01-14 21:00:00,1165.0,Books,3,42.2,West,False
 335,2024-01-14 22:00:00,1092.0,Apparel,3,7.32,South,False
-336,2024-01-14 23:00:00,1161.0,Electronics,6,-15.03,East,False
+336,2024-01-14 23:00:00,1161.0,Electronics,6,15.03,East,False
 337,2024-01-15 00:00:00,1192.0,Apparel,2,14.41,South,False
 338,2024-01-15 01:00:00,1063.0,Home Goods,1,44.61,East,False
 339,2024-01-15 02:00:00,1040.0,Electronics,7,43.68,West,False
@@ -373,7 +373,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 385,2024-01-17 00:00:00,1006.0,Electronics,6,58.07,North,False
 386,2024-01-17 01:00:00,1024.0,Books,1,34.78,South,False
 387,2024-01-17 02:00:00,1013.0,Electronics,2,40.52,South,False
-388,2024-01-17 03:00:00,1166.0,Books,5,-3.42,South,False
+388,2024-01-17 03:00:00,1166.0,Books,5,3.42,South,False
 389,2024-01-17 04:00:00,1178.0,Home Goods,1,38.96,North,False
 390,2024-01-17 05:00:00,1030.0,Books,7,46.82,West,False
 391,2024-01-17 06:00:00,1149.0,Electronics,1,36.8,South,False
@@ -414,7 +414,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 427,2024-01-18 18:00:00,1172.0,Books,6,56.36,South,False
 428,2024-01-18 19:00:00,1160.0,Electronics,7,4.07,North,False
 429,2024-01-18 20:00:00,1005.0,Electronics,3,53.79,North,False
-430,2024-01-18 21:00:00,1143.0,Books,3,-4.37,North,False
+430,2024-01-18 21:00:00,1143.0,Books,3,4.37,North,False
 431,2024-01-18 22:00:00,1016.0,Books,5,40.46,East,False
 432,2024-01-18 23:00:00,1147.0,Electronics,4,62.08,West,False
 433,2024-01-19 00:00:00,1165.0,Electronics,2,57.45,East,False
@@ -483,7 +483,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 498,2024-01-21 17:00:00,1074.0,Home Goods,1,25.49,South,False
 499,2024-01-21 18:00:00,1185.0,Books,5,59.3,East,False
 500,2024-01-21 19:00:00,1085.0,Electronics,6,32.41,South,False
-501,2024-01-21 20:00:00,1022.0,Books,1,-10.0,West,False
+501,2024-01-21 20:00:00,1022.0,Books,1,10.0,West,False
 502,2024-01-21 21:00:00,1130.0,Electronics,4,57.98,West,False
 503,2024-01-21 22:00:00,1192.0,Electronics,5,24.27,South,False
 504,2024-01-21 23:00:00,1173.0,Apparel,1,54.34,West,False
@@ -509,7 +509,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 524,2024-01-22 19:00:00,1164.0,Books,5,50.48,East,False
 525,2024-01-22 20:00:00,1063.0,Apparel,3,40.47,North,False
 526,2024-01-22 21:00:00,1062.0,Electronics,2,45.22,East,False
-527,2024-01-22 22:00:00,1184.0,Home Goods,7,-2.72,West,False
+527,2024-01-22 22:00:00,1184.0,Home Goods,7,2.72,West,False
 528,2024-01-22 23:00:00,1028.0,Electronics,7,41.19,South,False
 529,2024-01-23 00:00:00,1183.0,Electronics,6,29.94,East,False
 530,2024-01-23 01:00:00,1184.0,Electronics,3,63.36,North,False
@@ -577,7 +577,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 592,2024-01-25 15:00:00,1180.0,Home Goods,5,56.5,West,False
 593,2024-01-25 16:00:00,1047.0,Home Goods,2,16.79,West,False
 594,2024-01-25 17:00:00,1195.0,Apparel,7,22.43,North,False
-595,2024-01-25 18:00:00,1064.0,Books,5,-5.73,South,False
+595,2024-01-25 18:00:00,1064.0,Books,5,5.73,South,False
 596,2024-01-25 19:00:00,1160.0,Electronics,2,56.91,West,False
 597,2024-01-25 20:00:00,1115.0,Home Goods,3,39.76,North,False
 598,2024-01-25 21:00:00,1155.0,Apparel,2,41.76,East,False
@@ -707,7 +707,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 729,2024-01-31 08:00:00,1097.0,Home Goods,4,3.65,South,False
 730,2024-01-31 09:00:00,1131.0,Home Goods,7,34.56,East,False
 731,2024-01-31 10:00:00,1145.0,Books,3,52.29,South,False
-732,2024-01-31 11:00:00,1083.0,Electronics,7,-12.94,North,False
+732,2024-01-31 11:00:00,1083.0,Electronics,7,12.94,North,False
 733,2024-01-31 12:00:00,1184.0,Books,2,25.46,West,False
 734,2024-01-31 13:00:00,1154.0,Home Goods,3,67.02,East,False
 735,2024-01-31 14:00:00,1041.0,Apparel,3,65.06,North,False
@@ -769,7 +769,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 791,2024-02-02 22:00:00,1019.0,Apparel,5,10.47,West,False
 792,2024-02-02 23:00:00,1090.0,Electronics,3,59.25,North,False
 793,2024-02-03 00:00:00,1144.0,Electronics,3,65.51,South,False
-794,2024-02-03 01:00:00,1165.0,Books,3,-3.52,East,False
+794,2024-02-03 01:00:00,1165.0,Books,3,3.52,East,False
 795,2024-02-03 02:00:00,1086.0,Home Goods,3,28.51,North,False
 796,2024-02-03 03:00:00,1059.0,Electronics,3,42.79,North,False
 797,2024-02-03 04:00:00,1193.0,Books,3,59.69,South,False
@@ -967,7 +967,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 999,2024-02-11 14:00:00,1192.0,Apparel,4,28.86,North,False
 1001,2024-02-11 16:00:00,1161.0,Apparel,6,54.09,East,False
 1002,2024-02-11 17:00:00,1147.0,Books,2,54.59,North,False
-1003,2024-02-11 18:00:00,1111.0,Apparel,5,-3.68,Unknown,False
+1003,2024-02-11 18:00:00,1111.0,Apparel,5,3.68,Unknown,False
 1004,2024-02-11 19:00:00,1177.0,Home Goods,4,85.31,South,False
 1005,2024-02-11 20:00:00,1025.0,Home Goods,5,55.57,South,False
 1006,2024-02-11 21:00:00,1184.0,Electronics,1,58.94,West,False
@@ -1005,7 +1005,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1038,2024-02-13 05:00:00,1002.0,Electronics,2,61.76,South,False
 1039,2024-02-13 06:00:00,1087.0,Home Goods,5,19.65,North,False
 1040,2024-02-13 07:00:00,1165.0,Electronics,4,29.85,North,False
-1041,2024-02-13 08:00:00,1141.0,Electronics,5,-2.75,West,False
+1041,2024-02-13 08:00:00,1141.0,Electronics,5,2.75,West,False
 1042,2024-02-13 09:00:00,1171.0,Electronics,4,1.31,East,False
 1043,2024-02-13 10:00:00,1083.0,Electronics,3,80.96,West,False
 1044,2024-02-13 11:00:00,1074.0,Apparel,2,86.67,North,False
@@ -1260,7 +1260,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1300,2024-02-24 03:00:00,1005.0,Electronics,2,46.91,North,False
 1301,2024-02-24 04:00:00,1151.0,Electronics,7,38.43,West,False
 1302,2024-02-24 05:00:00,1080.0,Electronics,7,42.34,South,False
-1303,2024-02-24 06:00:00,1139.0,Electronics,1,-25.58,South,False
+1303,2024-02-24 06:00:00,1139.0,Electronics,1,25.58,South,False
 1304,2024-02-24 07:00:00,1179.0,Home Goods,4,46.14,South,False
 1305,2024-02-24 08:00:00,1122.0,Electronics,6,45.36,South,False
 1306,2024-02-24 09:00:00,1134.0,Electronics,5,65.77,East,False
@@ -1305,7 +1305,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1348,2024-02-26 03:00:00,1140.0,Books,4,48.76,West,False
 1349,2024-02-26 04:00:00,1146.0,Home Goods,2,57.05,West,False
 1350,2024-02-26 05:00:00,1119.0,Apparel,4,57.09,Unknown,False
-1351,2024-02-26 06:00:00,1012.0,Electronics,5,-7.12,East,False
+1351,2024-02-26 06:00:00,1012.0,Electronics,5,7.12,East,False
 1352,2024-02-26 07:00:00,1078.0,Electronics,7,40.19,North,False
 1353,2024-02-26 08:00:00,1099.0,Electronics,5,55.36,South,False
 1354,2024-02-26 09:00:00,1183.0,Books,2,36.79,West,False
@@ -1316,7 +1316,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1359,2024-02-26 14:00:00,1020.0,Electronics,3,67.54,East,False
 1360,2024-02-26 15:00:00,1073.0,Home Goods,3,42.63,West,False
 1361,2024-02-26 16:00:00,1016.0,Apparel,6,41.04,West,False
-1362,2024-02-26 17:00:00,1013.0,Books,7,-12.01,South,False
+1362,2024-02-26 17:00:00,1013.0,Books,7,12.01,South,False
 1363,2024-02-26 18:00:00,1070.0,Apparel,4,38.47,East,False
 1364,2024-02-26 19:00:00,1040.0,Electronics,3,17.93,North,False
 1365,2024-02-26 20:00:00,1110.0,Books,7,49.42,West,False
@@ -1419,7 +1419,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1466,2024-03-02 01:00:00,1022.0,Home Goods,5,43.71,East,False
 1467,2024-03-02 02:00:00,1127.0,Electronics,6,53.77,East,False
 1468,2024-03-02 03:00:00,1076.0,Electronics,7,48.17,East,False
-1469,2024-03-02 04:00:00,1155.0,Home Goods,6,-9.19,East,False
+1469,2024-03-02 04:00:00,1155.0,Home Goods,6,9.19,East,False
 1470,2024-03-02 05:00:00,1012.0,Electronics,2,38.53,South,False
 1471,2024-03-02 06:00:00,1179.0,Electronics,4,53.5,South,False
 1472,2024-03-02 07:00:00,1139.0,Electronics,7,77.81,South,False
@@ -1483,7 +1483,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1530,2024-03-04 17:00:00,1183.0,Electronics,4,70.91,West,False
 1531,2024-03-04 18:00:00,1017.0,Electronics,5,67.06,East,False
 1532,2024-03-04 19:00:00,1001.0,Electronics,3,41.93,East,False
-1533,2024-03-04 20:00:00,1186.0,Home Goods,7,-3.55,Unknown,False
+1533,2024-03-04 20:00:00,1186.0,Home Goods,7,3.55,Unknown,False
 1534,2024-03-04 21:00:00,1037.0,Electronics,3,52.82,South,False
 1535,2024-03-04 22:00:00,1163.0,Books,6,74.41,West,False
 1536,2024-03-04 23:00:00,1006.0,Apparel,5,69.68,East,False
@@ -1574,7 +1574,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1623,2024-03-08 14:00:00,1184.0,Books,6,72.03,South,False
 1624,2024-03-08 15:00:00,1003.0,Books,1,71.99,West,False
 1625,2024-03-08 16:00:00,1110.0,Home Goods,5,21.52,South,False
-1626,2024-03-08 17:00:00,1198.0,Home Goods,5,-5.43,West,False
+1626,2024-03-08 17:00:00,1198.0,Home Goods,5,5.43,West,False
 1627,2024-03-08 18:00:00,1115.0,Apparel,4,43.56,North,False
 1628,2024-03-08 19:00:00,1116.0,Apparel,6,67.45,West,False
 1629,2024-03-08 20:00:00,1077.0,Home Goods,4,76.83,North,False
@@ -1624,7 +1624,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1674,2024-03-10 17:00:00,1151.0,Home Goods,7,25.06,East,False
 1675,2024-03-10 18:00:00,1143.0,Home Goods,7,23.06,South,False
 1676,2024-03-10 19:00:00,1196.0,Books,4,59.73,South,False
-1677,2024-03-10 20:00:00,1029.0,Books,7,-9.33,North,False
+1677,2024-03-10 20:00:00,1029.0,Books,7,9.33,North,False
 1678,2024-03-10 21:00:00,1083.0,Electronics,4,36.03,West,False
 1679,2024-03-10 22:00:00,1184.0,Books,1,73.52,East,False
 1680,2024-03-10 23:00:00,1102.0,Home Goods,2,45.14,East,False
@@ -1700,7 +1700,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1753,2024-03-14 00:00:00,1125.0,Apparel,4,75.26,Unknown,False
 1755,2024-03-14 02:00:00,1125.0,Apparel,4,26.86,South,False
 1756,2024-03-14 03:00:00,1063.0,Books,2,61.46,North,False
-1757,2024-03-14 04:00:00,1069.0,Home Goods,1,-8.03,North,False
+1757,2024-03-14 04:00:00,1069.0,Home Goods,1,8.03,North,False
 1758,2024-03-14 05:00:00,1121.0,Home Goods,5,54.84,Unknown,False
 1759,2024-03-14 06:00:00,1114.0,Electronics,7,66.2,East,False
 1760,2024-03-14 07:00:00,1116.0,Books,2,33.47,South,False
@@ -1744,7 +1744,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1800,2024-03-15 23:00:00,1104.0,Apparel,1,63.67,West,False
 1801,2024-03-16 00:00:00,1011.0,Books,2,27.54,West,False
 1802,2024-03-16 01:00:00,1093.0,Electronics,6,18.59,South,False
-1803,2024-03-16 02:00:00,1090.0,Home Goods,4,-18.91,East,False
+1803,2024-03-16 02:00:00,1090.0,Home Goods,4,18.91,East,False
 1804,2024-03-16 03:00:00,1051.0,Books,1,43.6,South,False
 1805,2024-03-16 04:00:00,1025.0,Home Goods,5,28.57,East,False
 1806,2024-03-16 05:00:00,1009.0,Home Goods,1,52.96,South,False
@@ -1833,7 +1833,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 1891,2024-03-19 18:00:00,1037.0,Electronics,4,39.28,East,False
 1892,2024-03-19 19:00:00,1049.0,Electronics,2,26.15,Unknown,False
 1893,2024-03-19 20:00:00,1175.0,Electronics,2,67.92,South,False
-1894,2024-03-19 21:00:00,1142.0,Apparel,1,-20.27,South,False
+1894,2024-03-19 21:00:00,1142.0,Apparel,1,20.27,South,False
 1895,2024-03-19 22:00:00,1026.0,Apparel,4,36.14,West,False
 1896,2024-03-19 23:00:00,1170.0,Apparel,5,44.08,North,False
 1897,2024-03-20 00:00:00,1114.0,Electronics,4,31.78,West,False
@@ -1941,7 +1941,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2002,2024-03-24 09:00:00,1012.0,Home Goods,4,34.38,North,False
 2003,2024-03-24 10:00:00,1079.0,Books,1,33.57,East,False
 2004,2024-03-24 11:00:00,1091.0,Home Goods,1,57.72,West,False
-2005,2024-03-24 12:00:00,1159.0,Electronics,5,-2.93,Unknown,False
+2005,2024-03-24 12:00:00,1159.0,Electronics,5,2.93,Unknown,False
 2007,2024-03-24 14:00:00,1086.0,Apparel,4,7.52,South,False
 2008,2024-03-24 15:00:00,1030.0,Apparel,2,16.69,South,False
 2009,2024-03-24 16:00:00,1157.0,Books,4,34.71,South,False
@@ -2130,7 +2130,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2198,2024-04-01 13:00:00,1172.0,Books,5,77.45,South,False
 2199,2024-04-01 14:00:00,1114.0,Electronics,3,39.14,North,False
 2200,2024-04-01 15:00:00,1033.0,Home Goods,1,35.89,East,False
-2201,2024-04-01 16:00:00,1073.0,Apparel,4,-11.59,West,False
+2201,2024-04-01 16:00:00,1073.0,Apparel,4,11.59,West,False
 2202,2024-04-01 17:00:00,1001.0,Electronics,4,57.69,East,False
 2203,2024-04-01 18:00:00,1007.0,Electronics,6,47.02,North,False
 2204,2024-04-01 19:00:00,1067.0,Electronics,2,47.0,East,False
@@ -2172,7 +2172,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2242,2024-04-03 09:00:00,1132.0,Apparel,1,31.36,North,False
 2243,2024-04-03 10:00:00,1090.0,Electronics,4,42.18,South,False
 2244,2024-04-03 11:00:00,1022.0,Electronics,3,36.7,South,False
-2245,2024-04-03 12:00:00,1142.0,Apparel,1,-7.43,North,False
+2245,2024-04-03 12:00:00,1142.0,Apparel,1,7.43,North,False
 2246,2024-04-03 13:00:00,1166.0,Home Goods,5,47.46,East,False
 2247,2024-04-03 14:00:00,1115.0,Electronics,2,41.35,West,False
 2248,2024-04-03 15:00:00,1035.0,Books,3,70.42,East,False
@@ -2238,7 +2238,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2309,2024-04-06 04:00:00,1061.0,Apparel,6,54.43,South,False
 2310,2024-04-06 05:00:00,1106.0,Electronics,3,43.05,North,False
 2311,2024-04-06 06:00:00,1056.0,Books,2,63.7,North,False
-2312,2024-04-06 07:00:00,1013.0,Electronics,1,-9.46,West,False
+2312,2024-04-06 07:00:00,1013.0,Electronics,1,9.46,West,False
 2313,2024-04-06 08:00:00,1102.0,Home Goods,4,48.8,South,False
 2314,2024-04-06 09:00:00,1010.0,Electronics,4,69.05,West,False
 2315,2024-04-06 10:00:00,1045.0,Books,4,82.4,South,False
@@ -2266,7 +2266,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2338,2024-04-07 09:00:00,1163.0,Electronics,3,59.76,East,False
 2339,2024-04-07 10:00:00,1008.0,Electronics,1,59.18,North,False
 2340,2024-04-07 11:00:00,1018.0,Home Goods,5,90.04,West,False
-2341,2024-04-07 12:00:00,1084.0,Books,5,-1.69,South,False
+2341,2024-04-07 12:00:00,1084.0,Books,5,1.69,South,False
 2342,2024-04-07 13:00:00,1078.0,Electronics,7,35.71,North,False
 2343,2024-04-07 14:00:00,1109.0,Books,3,61.97,East,False
 2344,2024-04-07 15:00:00,1147.0,Apparel,3,38.25,West,False
@@ -2368,7 +2368,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2444,2024-04-11 19:00:00,1042.0,Home Goods,2,85.44,East,False
 2445,2024-04-11 20:00:00,1119.0,Apparel,2,55.25,Unknown,False
 2446,2024-04-11 21:00:00,1178.0,Books,4,65.64,West,False
-2447,2024-04-11 22:00:00,1154.0,Electronics,1,-16.66,West,False
+2447,2024-04-11 22:00:00,1154.0,Electronics,1,16.66,West,False
 2448,2024-04-11 23:00:00,1129.0,Home Goods,2,41.1,East,False
 2449,2024-04-12 00:00:00,1155.0,Apparel,4,67.04,East,False
 2450,2024-04-12 01:00:00,1034.0,Books,4,63.49,West,False
@@ -2551,7 +2551,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2637,2024-04-19 20:00:00,1067.0,Electronics,7,65.86,West,False
 2638,2024-04-19 21:00:00,1148.0,Apparel,4,60.91,North,False
 2639,2024-04-19 22:00:00,1030.0,Books,5,65.44,West,False
-2640,2024-04-19 23:00:00,1170.0,Books,5,-10.45,West,False
+2640,2024-04-19 23:00:00,1170.0,Books,5,10.45,West,False
 2641,2024-04-20 00:00:00,1047.0,Apparel,7,79.67,Unknown,False
 2642,2024-04-20 01:00:00,1099.0,Apparel,2,57.73,West,False
 2643,2024-04-20 02:00:00,1040.0,Home Goods,2,94.23,South,False
@@ -2669,7 +2669,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2758,2024-04-24 21:00:00,1126.0,Electronics,3,52.18,East,False
 2759,2024-04-24 22:00:00,1071.0,Books,6,9.98,West,False
 2760,2024-04-24 23:00:00,1085.0,Home Goods,4,22.55,East,False
-2761,2024-04-25 00:00:00,1026.0,Electronics,4,-5.22,West,False
+2761,2024-04-25 00:00:00,1026.0,Electronics,4,5.22,West,False
 2762,2024-04-25 01:00:00,1086.0,Apparel,5,79.6,West,False
 2763,2024-04-25 02:00:00,1072.0,Home Goods,1,75.55,East,False
 2764,2024-04-25 03:00:00,1007.0,Books,7,52.86,South,False
@@ -2797,7 +2797,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2886,2024-04-30 05:00:00,1030.0,Electronics,6,22.11,East,False
 2887,2024-04-30 06:00:00,1186.0,Electronics,6,65.74,North,False
 2888,2024-04-30 07:00:00,1012.0,Apparel,6,33.92,West,False
-2889,2024-04-30 08:00:00,1029.0,Books,6,-3.27,South,False
+2889,2024-04-30 08:00:00,1029.0,Books,6,3.27,South,False
 2890,2024-04-30 09:00:00,1039.0,Electronics,2,80.31,South,False
 2891,2024-04-30 10:00:00,1029.0,Electronics,1,28.96,East,False
 2892,2024-04-30 11:00:00,1113.0,Books,2,40.07,East,False
@@ -2838,7 +2838,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2927,2024-05-01 22:00:00,1123.0,Books,5,40.95,West,False
 2928,2024-05-01 23:00:00,1064.0,Electronics,2,42.63,North,True
 2930,2024-05-02 01:00:00,1130.0,Electronics,4,68.36,West,False
-2931,2024-05-02 02:00:00,1034.0,Electronics,3,-1.94,North,False
+2931,2024-05-02 02:00:00,1034.0,Electronics,3,1.94,North,False
 2932,2024-05-02 03:00:00,1134.0,Electronics,6,45.61,East,False
 2934,2024-05-02 05:00:00,1086.0,Home Goods,2,17.57,East,False
 2935,2024-05-02 06:00:00,1161.0,Apparel,7,58.44,West,False
@@ -2868,7 +2868,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 2961,2024-05-03 08:00:00,1184.0,Electronics,5,72.45,West,False
 2962,2024-05-03 09:00:00,1084.0,Electronics,6,80.67,West,False
 2963,2024-05-03 10:00:00,1194.0,Home Goods,1,30.23,East,False
-2964,2024-05-03 11:00:00,1013.0,Home Goods,4,-13.42,South,False
+2964,2024-05-03 11:00:00,1013.0,Home Goods,4,13.42,South,False
 2965,2024-05-03 12:00:00,1146.0,Electronics,7,65.89,North,False
 2966,2024-05-03 13:00:00,1118.0,Home Goods,7,38.16,South,False
 2967,2024-05-03 14:00:00,1048.0,Electronics,6,27.68,West,False
@@ -2944,7 +2944,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3039,2024-05-06 14:00:00,1056.0,Electronics,3,34.27,North,False
 3040,2024-05-06 15:00:00,1039.0,Apparel,3,32.33,West,False
 3041,2024-05-06 16:00:00,1079.0,Books,1,40.52,North,False
-3042,2024-05-06 17:00:00,1058.0,Electronics,7,-0.44,East,False
+3042,2024-05-06 17:00:00,1058.0,Electronics,7,0.44,East,False
 3043,2024-05-06 18:00:00,1065.0,Books,2,43.17,West,False
 3044,2024-05-06 19:00:00,1105.0,Electronics,4,65.55,East,False
 3045,2024-05-06 20:00:00,1037.0,Home Goods,3,77.46,North,False
@@ -3006,7 +3006,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3101,2024-05-09 04:00:00,1073.0,Home Goods,3,12.05,North,False
 3102,2024-05-09 05:00:00,1026.0,Books,7,10.64,East,False
 3103,2024-05-09 06:00:00,1002.0,Electronics,3,38.47,Unknown,False
-3104,2024-05-09 07:00:00,1087.0,Apparel,2,-1.76,South,False
+3104,2024-05-09 07:00:00,1087.0,Apparel,2,1.76,South,False
 3105,2024-05-09 08:00:00,1140.0,Electronics,1,80.9,North,False
 3106,2024-05-09 09:00:00,1060.0,Home Goods,6,56.94,Unknown,False
 3107,2024-05-09 10:00:00,1172.0,Home Goods,7,32.29,South,False
@@ -3148,7 +3148,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3246,2024-05-15 05:00:00,1161.0,Books,1,33.6,South,False
 3248,2024-05-15 07:00:00,1017.0,Electronics,3,30.67,West,False
 3249,2024-05-15 08:00:00,1028.0,Home Goods,5,61.29,South,False
-3250,2024-05-15 09:00:00,1079.0,Books,1,-1.62,Unknown,False
+3250,2024-05-15 09:00:00,1079.0,Books,1,1.62,Unknown,False
 3251,2024-05-15 10:00:00,1067.0,Apparel,2,33.81,West,False
 3252,2024-05-15 11:00:00,1149.0,Electronics,7,41.57,West,False
 3253,2024-05-15 12:00:00,1031.0,Electronics,7,79.85,North,False
@@ -3229,7 +3229,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3332,2024-05-18 19:00:00,1170.0,Electronics,6,51.38,West,False
 3333,2024-05-18 20:00:00,1049.0,Apparel,6,32.49,East,False
 3334,2024-05-18 21:00:00,1169.0,Electronics,6,46.28,West,False
-3336,2024-05-18 23:00:00,1045.0,Home Goods,4,-1.42,South,False
+3336,2024-05-18 23:00:00,1045.0,Home Goods,4,1.42,South,False
 3337,2024-05-19 00:00:00,1104.0,Electronics,1,61.63,East,False
 3338,2024-05-19 01:00:00,1010.0,Home Goods,2,37.51,South,False
 3339,2024-05-19 02:00:00,1171.0,Apparel,7,39.77,East,False
@@ -3242,7 +3242,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3346,2024-05-19 09:00:00,1151.0,Books,4,49.81,East,False
 3347,2024-05-19 10:00:00,1120.0,Electronics,4,19.29,North,False
 3348,2024-05-19 11:00:00,1025.0,Electronics,4,64.12,East,False
-3349,2024-05-19 12:00:00,1024.0,Apparel,5,-3.91,North,False
+3349,2024-05-19 12:00:00,1024.0,Apparel,5,3.91,North,False
 3350,2024-05-19 13:00:00,1156.0,Apparel,5,33.27,South,False
 3351,2024-05-19 14:00:00,1031.0,Electronics,1,45.46,West,False
 3352,2024-05-19 15:00:00,1187.0,Home Goods,1,29.2,East,False
@@ -3308,7 +3308,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3414,2024-05-22 05:00:00,1018.0,Electronics,2,22.53,East,False
 3415,2024-05-22 06:00:00,1119.0,Apparel,4,22.41,Unknown,False
 3416,2024-05-22 07:00:00,1082.0,Electronics,4,3.03,North,False
-3417,2024-05-22 08:00:00,1123.0,Home Goods,5,-17.39,West,False
+3417,2024-05-22 08:00:00,1123.0,Home Goods,5,17.39,West,False
 3418,2024-05-22 09:00:00,1175.0,Home Goods,5,42.36,West,False
 3419,2024-05-22 10:00:00,1019.0,Apparel,4,91.4,East,False
 3420,2024-05-22 11:00:00,1056.0,Electronics,2,80.94,Unknown,False
@@ -3362,7 +3362,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3468,2024-05-24 11:00:00,1051.0,Apparel,6,73.62,South,False
 3469,2024-05-24 12:00:00,1104.0,Apparel,4,12.41,South,False
 3470,2024-05-24 13:00:00,1173.0,Electronics,1,65.45,East,False
-3471,2024-05-24 14:00:00,1044.0,Home Goods,5,-5.74,East,False
+3471,2024-05-24 14:00:00,1044.0,Home Goods,5,5.74,East,False
 3472,2024-05-24 15:00:00,1149.0,Electronics,7,36.99,North,False
 3474,2024-05-24 17:00:00,1177.0,Electronics,1,38.43,North,False
 3475,2024-05-24 18:00:00,1059.0,Books,7,46.8,North,False
@@ -3410,7 +3410,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3517,2024-05-26 12:00:00,1033.0,Home Goods,2,23.23,West,False
 3518,2024-05-26 13:00:00,1180.0,Books,3,26.51,North,False
 3519,2024-05-26 14:00:00,1135.0,Books,7,36.46,North,False
-3520,2024-05-26 15:00:00,1184.0,Electronics,2,-3.63,East,False
+3520,2024-05-26 15:00:00,1184.0,Electronics,2,3.63,East,False
 3521,2024-05-26 16:00:00,1165.0,Home Goods,7,40.33,West,False
 3522,2024-05-26 17:00:00,1066.0,Books,1,34.84,West,False
 3523,2024-05-26 18:00:00,1165.0,Apparel,2,60.8,South,False
@@ -3442,7 +3442,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3550,2024-05-27 21:00:00,1127.0,Electronics,4,86.01,South,False
 3551,2024-05-27 22:00:00,1087.0,Books,4,22.79,West,False
 3552,2024-05-27 23:00:00,1104.0,Electronics,3,59.41,South,False
-3553,2024-05-28 00:00:00,1187.0,Home Goods,6,-12.56,West,False
+3553,2024-05-28 00:00:00,1187.0,Home Goods,6,12.56,West,False
 3554,2024-05-28 01:00:00,1142.0,Home Goods,3,58.37,West,False
 3555,2024-05-28 02:00:00,1082.0,Books,1,7.6,West,False
 3556,2024-05-28 03:00:00,1089.0,Books,4,34.5,North,False
@@ -3532,7 +3532,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3643,2024-05-31 18:00:00,1185.0,Books,7,45.99,North,False
 3644,2024-05-31 19:00:00,1098.0,Home Goods,7,46.98,South,False
 3645,2024-05-31 20:00:00,1191.0,Electronics,3,46.39,West,False
-3646,2024-05-31 21:00:00,1105.0,Apparel,4,-7.6,North,False
+3646,2024-05-31 21:00:00,1105.0,Apparel,4,7.6,North,False
 3647,2024-05-31 22:00:00,1128.0,Apparel,4,41.29,East,False
 3648,2024-05-31 23:00:00,1120.0,Electronics,1,17.72,South,False
 3649,2024-06-01 00:00:00,1199.0,Books,6,77.53,North,False
@@ -3543,7 +3543,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3654,2024-06-01 05:00:00,1103.0,Electronics,1,31.85,West,False
 3655,2024-06-01 06:00:00,1133.0,Electronics,5,83.85,West,False
 3656,2024-06-01 07:00:00,1096.0,Apparel,7,31.16,North,False
-3657,2024-06-01 08:00:00,1102.0,Electronics,6,-2.11,West,False
+3657,2024-06-01 08:00:00,1102.0,Electronics,6,2.11,West,False
 3658,2024-06-01 09:00:00,1184.0,Books,5,65.6,West,False
 3659,2024-06-01 10:00:00,1066.0,Electronics,1,75.01,North,False
 3660,2024-06-01 11:00:00,1098.0,Books,6,78.18,West,False
@@ -3642,7 +3642,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3758,2024-06-05 13:00:00,1109.0,Books,5,38.78,West,False
 3759,2024-06-05 14:00:00,1016.0,Electronics,7,75.85,South,False
 3760,2024-06-05 15:00:00,1112.0,Electronics,1,51.13,South,False
-3761,2024-06-05 16:00:00,1034.0,Books,7,-16.66,North,False
+3761,2024-06-05 16:00:00,1034.0,Books,7,16.66,North,False
 3762,2024-06-05 17:00:00,1101.0,Home Goods,1,93.42,South,False
 3763,2024-06-05 18:00:00,1115.0,Apparel,7,48.66,East,False
 3764,2024-06-05 19:00:00,1127.0,Electronics,5,51.87,South,False
@@ -3756,7 +3756,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3873,2024-06-10 08:00:00,1172.0,Books,1,33.73,South,False
 3874,2024-06-10 09:00:00,1095.0,Books,7,29.56,West,False
 3875,2024-06-10 10:00:00,1124.0,Electronics,7,53.63,South,False
-3876,2024-06-10 11:00:00,1120.0,Electronics,4,-15.51,West,False
+3876,2024-06-10 11:00:00,1120.0,Electronics,4,15.51,West,False
 3877,2024-06-10 12:00:00,1138.0,Electronics,5,32.93,West,False
 3878,2024-06-10 13:00:00,1049.0,Electronics,1,21.97,East,False
 3881,2024-06-10 16:00:00,1172.0,Home Goods,2,33.79,West,False
@@ -3796,7 +3796,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3915,2024-06-12 02:00:00,1157.0,Apparel,7,14.72,East,False
 3916,2024-06-12 03:00:00,1015.0,Home Goods,4,28.18,West,False
 3917,2024-06-12 04:00:00,1013.0,Electronics,1,47.1,North,False
-3918,2024-06-12 05:00:00,1169.0,Electronics,3,-0.42,West,False
+3918,2024-06-12 05:00:00,1169.0,Electronics,3,0.42,West,False
 3919,2024-06-12 06:00:00,1012.0,Apparel,2,38.95,North,False
 3920,2024-06-12 07:00:00,1122.0,Books,7,37.72,East,False
 3921,2024-06-12 08:00:00,1187.0,Apparel,3,38.95,East,False
@@ -3831,7 +3831,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3951,2024-06-13 14:00:00,1075.0,Electronics,6,61.56,North,False
 3952,2024-06-13 15:00:00,1043.0,Apparel,1,10.9,North,False
 3953,2024-06-13 16:00:00,1145.0,Electronics,5,12.72,East,False
-3954,2024-06-13 17:00:00,1092.0,Home Goods,6,-0.67,South,False
+3954,2024-06-13 17:00:00,1092.0,Home Goods,6,0.67,South,False
 3955,2024-06-13 18:00:00,1118.0,Books,7,60.72,North,False
 3956,2024-06-13 19:00:00,1188.0,Electronics,2,58.47,West,False
 3957,2024-06-13 20:00:00,1104.0,Apparel,6,62.94,South,False
@@ -3865,7 +3865,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3986,2024-06-15 01:00:00,1067.0,Books,7,60.97,West,False
 3987,2024-06-15 02:00:00,1062.0,Apparel,2,72.05,East,False
 3988,2024-06-15 03:00:00,1014.0,Electronics,4,52.94,South,False
-3989,2024-06-15 04:00:00,1083.0,Electronics,6,-7.84,North,False
+3989,2024-06-15 04:00:00,1083.0,Electronics,6,7.84,North,False
 3990,2024-06-15 05:00:00,1095.0,Electronics,6,20.11,East,False
 3991,2024-06-15 06:00:00,1150.0,Electronics,2,54.3,South,False
 3992,2024-06-15 07:00:00,1150.0,Electronics,6,37.61,South,False
@@ -3878,7 +3878,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 3999,2024-06-15 14:00:00,1146.0,Electronics,4,48.53,North,False
 4000,2024-06-15 15:00:00,1104.0,Apparel,6,18.24,East,False
 4001,2024-06-15 16:00:00,1063.0,Home Goods,3,42.4,North,False
-4002,2024-06-15 17:00:00,1168.0,Electronics,6,-5.56,Unknown,False
+4002,2024-06-15 17:00:00,1168.0,Electronics,6,5.56,Unknown,False
 4003,2024-06-15 18:00:00,1007.0,Apparel,1,13.64,South,False
 4004,2024-06-15 19:00:00,1089.0,Home Goods,7,38.55,North,False
 4005,2024-06-15 20:00:00,1160.0,Apparel,4,92.5,West,False
@@ -3998,7 +3998,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4124,2024-06-20 19:00:00,1053.0,Electronics,1,60.75,West,False
 4125,2024-06-20 20:00:00,1157.0,Electronics,1,60.88,West,False
 4126,2024-06-20 21:00:00,1100.0,Electronics,2,54.44,North,False
-4127,2024-06-20 22:00:00,1009.0,Books,2,-0.85,East,False
+4127,2024-06-20 22:00:00,1009.0,Books,2,0.85,East,False
 4128,2024-06-20 23:00:00,1018.0,Books,1,25.35,East,False
 4129,2024-06-21 00:00:00,1109.0,Electronics,3,72.68,East,False
 4130,2024-06-21 01:00:00,1084.0,Electronics,3,19.88,South,False
@@ -4196,7 +4196,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4326,2024-06-29 05:00:00,1078.0,Home Goods,4,53.49,West,False
 4327,2024-06-29 06:00:00,1170.0,Electronics,3,83.72,North,False
 4328,2024-06-29 07:00:00,1085.0,Electronics,6,28.5,South,False
-4329,2024-06-29 08:00:00,1009.0,Home Goods,1,-12.5,East,False
+4329,2024-06-29 08:00:00,1009.0,Home Goods,1,12.5,East,False
 4330,2024-06-29 09:00:00,1175.0,Home Goods,7,23.93,East,False
 4331,2024-06-29 10:00:00,1037.0,Electronics,1,54.72,East,False
 4332,2024-06-29 11:00:00,1054.0,Home Goods,3,45.54,West,False
@@ -4276,7 +4276,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4408,2024-07-02 15:00:00,1037.0,Electronics,7,32.24,Unknown,False
 4409,2024-07-02 16:00:00,1052.0,Electronics,7,25.28,East,False
 4410,2024-07-02 17:00:00,1064.0,Electronics,5,45.71,West,False
-4411,2024-07-02 18:00:00,1024.0,Books,7,-6.36,North,False
+4411,2024-07-02 18:00:00,1024.0,Books,7,6.36,North,False
 4412,2024-07-02 19:00:00,1117.0,Electronics,3,38.69,West,False
 4413,2024-07-02 20:00:00,1066.0,Books,5,43.19,East,True
 4414,2024-07-02 21:00:00,1143.0,Electronics,4,17.81,East,False
@@ -4557,7 +4557,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4696,2024-07-14 15:00:00,1167.0,Apparel,4,45.57,South,False
 4697,2024-07-14 16:00:00,1015.0,Home Goods,4,50.9,South,False
 4698,2024-07-14 17:00:00,1017.0,Electronics,2,40.77,East,False
-4699,2024-07-14 18:00:00,1060.0,Apparel,3,-8.1,South,False
+4699,2024-07-14 18:00:00,1060.0,Apparel,3,8.1,South,False
 4700,2024-07-14 19:00:00,1004.0,Apparel,1,22.26,West,False
 4701,2024-07-14 20:00:00,1177.0,Electronics,1,42.49,West,False
 4702,2024-07-14 21:00:00,1011.0,Electronics,1,52.29,South,False
@@ -4597,7 +4597,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4737,2024-07-16 08:00:00,1012.0,Electronics,4,47.15,South,False
 4738,2024-07-16 09:00:00,1073.0,Home Goods,7,97.22,North,False
 4739,2024-07-16 10:00:00,1069.0,Books,7,77.92,East,False
-4740,2024-07-16 11:00:00,1104.0,Apparel,7,-14.49,North,False
+4740,2024-07-16 11:00:00,1104.0,Apparel,7,14.49,North,False
 4741,2024-07-16 12:00:00,1052.0,Electronics,4,46.27,South,False
 4742,2024-07-16 13:00:00,1092.0,Home Goods,3,63.64,East,False
 4743,2024-07-16 14:00:00,1085.0,Home Goods,1,41.35,South,False
@@ -4687,7 +4687,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4830,2024-07-20 05:00:00,1097.0,Electronics,5,17.03,South,False
 4831,2024-07-20 06:00:00,1069.0,Electronics,3,65.91,West,False
 4832,2024-07-20 07:00:00,1021.0,Books,6,43.85,East,False
-4833,2024-07-20 08:00:00,1077.0,Electronics,4,-0.38,South,False
+4833,2024-07-20 08:00:00,1077.0,Electronics,4,0.38,South,False
 4834,2024-07-20 09:00:00,1047.0,Apparel,2,48.57,North,False
 4835,2024-07-20 10:00:00,1195.0,Electronics,1,36.88,West,False
 4836,2024-07-20 11:00:00,1105.0,Apparel,7,33.86,North,False
@@ -4822,7 +4822,7 @@ order_id,order_date,customer_id,product_category,quantity,unit_price,region,is_r
 4970,2024-07-26 01:00:00,1163.0,Electronics,3,2.74,East,False
 4971,2024-07-26 02:00:00,1171.0,Electronics,1,52.54,East,False
 4972,2024-07-26 03:00:00,1076.0,Electronics,6,30.46,West,False
-4973,2024-07-26 04:00:00,1167.0,Apparel,3,-2.12,North,False
+4973,2024-07-26 04:00:00,1167.0,Apparel,3,2.12,North,False
 4974,2024-07-26 05:00:00,1154.0,Apparel,2,37.79,East,False
 4975,2024-07-26 06:00:00,1160.0,Home Goods,6,81.96,South,False
 4976,2024-07-26 07:00:00,1160.0,Electronics,1,31.88,North,False
