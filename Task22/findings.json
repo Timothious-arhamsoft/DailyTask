@@ -1,0 +1,41 @@
+{
+    "step_2_relationship": {
+        "finding": "Study hours per week and exam score show a strong positive relationship (Pearson r = 0.689, n = 600): students who study more tend to score higher."
+    },
+    "step_3_null_relationship": {
+        "finding": "Sleep hours per night show little to no meaningful linear relationship with exam score in this dataset (Pearson r = -0.022, n = 600); this near-zero correlation is itself the finding, not a chart that failed."
+    },
+    "step_4_comparison": {
+        "finding": "This is a comparison chart, not a relationship chart: class_section has no inherent numeric order, so shuffling the bars into any other order (B, A, C or C, A, B) would convey exactly the same information, which is the defining test for a categorical comparison."
+    },
+    "step_5_line_chart_trap": {
+        "finding": "Connecting the section means with a line falsely implies a continuous trend or path from A through B to C — as if a student could move gradually along the x-axis and their score would rise or fall accordingly — when in fact there is no 'between A and B' for any student to occupy; the bar chart in step 4 makes no such claim."
+    },
+    "step_7_color_and_order": {
+        "finding": "Red/green/blue per bar implies an unintended meaning (e.g. status or severity) that class_section doesn't actually have, so a single consistent color is the safer choice here; the bars are also kept in their natural A, B, C order rather than sorted by score, since class_section is the one piece of structure the category already has and sorting by value would force a reader to hunt for the section they're looking for."
+    },
+    "step_8_self_audit": {
+        "findings_paragraph": "Study hours per week and exam score show a strong positive relationship (Pearson r = 0.689). Sleep hours per night show essentially no relationship with exam score (Pearson r = -0.022). Section A's mean exam score is 87.6.",
+        "audit_results": [
+            {
+                "claim": "r (study_hours vs exam_score)",
+                "stated_in_paragraph": 0.689,
+                "freshly_recomputed": 0.689,
+                "match": true
+            },
+            {
+                "claim": "r (sleep_hours vs exam_score)",
+                "stated_in_paragraph": -0.022,
+                "freshly_recomputed": -0.022,
+                "match": true
+            },
+            {
+                "claim": "mean exam_score, section A",
+                "stated_in_paragraph": 87.6,
+                "freshly_recomputed": 87.6,
+                "match": true
+            }
+        ],
+        "all_claims_match": true
+    }
+}
