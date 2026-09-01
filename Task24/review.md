@@ -405,7 +405,7 @@ The observed Data Science − Web Dev difference is:
 A bootstrap 95% confidence interval for the Data Science − Web Dev completion gap is approximately:
 
 ```text
-6.39 to 13.25 percentage points
+6.34 to 13.26 percentage points
 ```
 
 **Interpretation:**
@@ -416,7 +416,7 @@ Therefore, the bootstrap result supports the existence of a difference between t
 
 **Correct wording:**
 
-> Data Science learners have an observed mean completion rate 9.82 percentage points higher than Web Dev learners. A bootstrap 95% confidence interval for this gap is approximately 6.39–13.25 percentage points, which excludes zero and supports a difference between the groups in this sample.
+> Data Science learners have an observed mean completion rate 9.82 percentage points higher than Web Dev learners. A bootstrap 95% confidence interval for this gap is approximately 6.34–13.26 percentage points, which excludes zero and supports a difference between the groups in this sample.
 
 This should still not be interpreted as evidence that being enrolled in the Data Science track causes higher completion.
 
@@ -435,7 +435,7 @@ The following values were independently recomputed from the `learners` DataFrame
 | Data Science mean completion | **76.78%** |
 | Design mean completion | **70.69%** |
 | Data Science − Web Dev gap | **9.82 percentage points** |
-| Bootstrap 95% CI | **6.39 to 13.25 percentage points** |
+| Bootstrap 95% CI | **6.34 to 13.26 percentage points** |
 | Does CI include zero? | **No** |
 
 ---
