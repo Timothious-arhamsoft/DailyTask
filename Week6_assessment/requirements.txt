@@ -1,0 +1,7 @@
+jupyterlab 
+numpy
+pandas==3.0.2
+scikit-learn
+scipy
+matplotlib
+
