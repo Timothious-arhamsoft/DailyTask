@@ -1,0 +1,8 @@
+jupyterlab 
+numpy
+pandas==3.0.2
+scikit-learn
+scipy
+matplotlib
+tornado==6.5.8
+
