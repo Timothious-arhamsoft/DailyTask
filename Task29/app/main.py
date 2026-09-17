@@ -98,7 +98,7 @@ def chat_local(payload: ChatRequest) -> ChatResponse:
     try:
         client = get_client(use_local=True)
         reply = ask_model(client, model=model, message=payload.message)
-    except Exception as exc:  # noqa: BLE001
+    except Exception as exc:
         raise HTTPException(status_code=502, detail=str(exc)) from exc
     return ChatResponse(reply=reply)
 
