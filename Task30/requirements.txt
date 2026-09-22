@@ -1,0 +1,4 @@
+jupyterlab 
+numpy
+scikit-learn
+qdrant-client
