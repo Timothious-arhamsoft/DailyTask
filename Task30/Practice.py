@@ -1,11 +1,12 @@
 from typing import List
 import re
+from sentence_transformers import SentenceTransformer
 
 # Fixed-Size Chunking 
 # Split the text into units (words, in this case)
 def word_splitter(source_text: str) -> List[str]:
-    source_text = re.sub("\s+", " ", source_text)  # Replace multiple whitespces
-    return re.split("\s", source_text)  # Split by single whitespace
+    source_text = re.sub(r"\s+", " ", source_text) # Replace multiple whitespces
+    return re.split(r"\s", source_text) # Split by single whitespace
 
 def get_chunks_fixed_size_with_overlap(text: str, chunk_size: int, overlap_fraction: float = 0.2) -> List[str]:
     text_words = word_splitter(text)
@@ -95,6 +96,22 @@ def markdown_document_chunking(text: str) -> List[str]:
 
     return chunks
 
+# Implementation of Word Embedding
+def word_embedding(text: str) -> List[float]:
+    corpus = text
+
+    print("Corpus: ")
+    print(corpus)
+    # Load Sentence-BERT model
+    model = SentenceTransformer('all-MiniLM-L6-v2')
+
+    # Encode sentences into embeddings
+    embeddings = model.encode(corpus)
+
+    print("Embeddings: ")
+    print(embeddings)
+
+
 def main():
     print("Fixed-Size Chunking with Overlap Example")
     text = "This is a sample text that will be split into chunks of fixed size with overlap."
@@ -122,9 +139,13 @@ def main():
     This is the content under Header 3.
     """
     markdown_chunks = markdown_document_chunking(markdown_text)
-    for i, chunk in enumerate(markdown_chunks):
-        print(f"Chunk {i + 1}: {chunk}")
+    # for i, chunk in enumerate(markdown_chunks):
+    #     print(f"Chunk {i + 1}: {chunk}")
 
-
+    print("\nWord Embedding Example")
+    text = ["Machine learning models require large datasets.","Artificial intelligence is changing the world.",
+    "Neural networks are inspired by the human brain.","Deep learning is a subset of machine learning.",
+    "Data preprocessing is essential for better accuracy."]
+    word_embedding(text)
 if __name__ == "__main__":
     main()
