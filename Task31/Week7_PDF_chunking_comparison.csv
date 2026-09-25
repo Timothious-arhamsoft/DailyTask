@@ -1,0 +1,6 @@
+strategy,chunks,average_characters,min_characters,max_characters
+fixed_size,18,708.5,14,900
+sentence,18,888.3,13,1486
+paragraph,11,1193.4,14,1829
+recursive,13,922.5,14,1322
+semantic,12,905.9,14,2165
