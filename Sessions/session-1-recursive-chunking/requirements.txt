@@ -1,0 +1,17 @@
+jupyterlab
+ipykernel
+
+pymupdf
+python-docx
+
+pandas
+numpy
+matplotlib
+
+langchain
+langchain-text-splitters
+langchain-huggingface
+langchain-experimental
+
+sentence-transformers
+nltk
