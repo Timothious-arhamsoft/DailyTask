@@ -1,0 +1,449 @@
+[
+  {
+    "id": "asthma_Q1",
+    "source": "asthma_patient_information.pdf",
+    "type": "fact",
+    "question": "What are the common symptoms of asthma?",
+    "evidence": [
+      "symptoms such as coughing, wheezing",
+      "shortness of breath, and chest tightness"
+    ],
+    "answer": "Common symptoms of asthma include coughing, wheezing, shortness of breath, and chest tightness."
+  },
+  {
+    "id": "asthma_Q2",
+    "source": "asthma_patient_information.pdf",
+    "type": "multi",
+    "question": "What are the common triggers of asthma?",
+    "evidence": [
+      "Colds and viruses",
+      "Dust / Pollution / Smoke",
+      "Stress or heightened emotions",
+      "Temperature extremes",
+      "Strong smells"
+    ],
+    "answer": "Common asthma triggers include colds and viruses, allergies, dust, pollution, smoke, stress or heightened emotions, temperature changes, hormones, and strong smells."
+  },
+  {
+    "id": "asthma_Q3",
+    "source": "asthma_patient_information.pdf",
+    "type": "fact",
+    "question": "What are the main types of inhalers used to treat asthma?",
+    "evidence": [
+      "Preventer inhalers try to stop",
+      "Reliever inhalers help to relieve"
+    ],
+    "answer": "The main inhaler types described are preventer inhalers and reliever inhalers."
+  },
+  {
+    "id": "asthma_Q4",
+    "source": "asthma_patient_information.pdf",
+    "type": "multi",
+    "question": "What are the criteria for well-controlled asthma?",
+    "evidence": [
+      "more than 3 times per week",
+      "does not interfere with your normal daily activities",
+      "wake at night with asthma symptoms",
+      "had a recent attack"
+    ],
+    "answer": "Well-controlled asthma includes not requiring the reliever inhaler more than three times per week, no interference with normal daily activities, no nighttime asthma symptoms, and no recent asthma attack."
+  },
+  {
+    "id": "asthma_Q5",
+    "source": "asthma_patient_information.pdf",
+    "type": "multi",
+    "question": "What are the warning signs of an asthma attack?",
+    "evidence": [
+      "needing to take it more than every 4 hours",
+      "are getting worse",
+      "difficult to speak, eat or sleep",
+      "catch your breath properly"
+    ],
+    "answer": "Warning signs of an asthma attack include a reliever inhaler not helping or being needed more frequently than every four hours, worsening wheeze, cough, chest tightness or breathlessness, and breathlessness that makes speaking, eating, or sleeping difficult."
+  },
+  {
+    "id": "asthma_Q6",
+    "source": "asthma_patient_information.pdf",
+    "type": "paraphrase",
+    "question": "What can make my breathing worse?",
+    "evidence": [
+      "Colds and viruses",
+      "Dust / Pollution / Smoke",
+      "Strong smells"
+    ]
+  },
+  {
+    "id": "asthma_Q7",
+    "source": "asthma_patient_information.pdf",
+    "type": "fact",
+    "question": "How is asthma diagnosed?",
+    "evidence": [
+      "There is no one test to diagnose asthma",
+      "symptom history and the results of breathing tests"
+    ]
+  },
+  {
+    "id": "asthma_Q8",
+    "source": "asthma_patient_information.pdf",
+    "type": "fact",
+    "question": "What should I do during an asthma attack?",
+    "evidence": [
+      "Sit up straight",
+      "Take one puff of your reliever inhaler",
+      "call 999"
+    ]
+  },
+  {
+    "id": "asthma_Q9",
+    "source": "asthma_patient_information.pdf",
+    "type": "multi",
+    "question": "What makes someone more likely to develop asthma?",
+    "evidence": [
+      "It can run in families",
+      "Premature birth or low birth weight",
+      "Occupational exposure",
+      "Hormones can play a part"
+    ]
+  },
+  {
+    "id": "asthma_Q10",
+    "source": "asthma_patient_information.pdf",
+    "type": "paraphrase",
+    "question": "Do I still need my preventer inhaler when I feel well?",
+    "evidence": [
+      "taken every day even if you are symptom free"
+    ]
+  },
+  {
+    "id": "asthma_Q11",
+    "source": "asthma_patient_information.pdf",
+    "type": "paraphrase",
+    "question": "Can exercise trigger asthma and how can it be prevented?",
+    "evidence": [
+      "exercise induced asthma",
+      "reliever medication before exercise"
+    ]
+  },
+  {
+    "id": "asthma_Q12",
+    "source": "asthma_patient_information.pdf",
+    "type": "multi",
+    "question": "How serious is asthma?",
+    "evidence": [
+      "around 5% of all people with asthma",
+      "even if you consider your asthma to be mild"
+    ]
+  },
+  {
+    "id": "htn_Q1",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "At what blood pressure level should drug treatment be started in adults with hypertension?",
+    "evidence": [
+      "initiation of pharmacological antihypertensive treatment of individuals with a confirmed diagnosis of hypertension"
+    ]
+  },
+  {
+    "id": "htn_Q2",
+    "source": "who_hypertension.pdf",
+    "type": "multi",
+    "question": "Which drug classes does WHO recommend as first-line treatment for hypertension?",
+    "evidence": [
+      "thiazide and thiazide-like agents",
+      "angiotensin-converting enzyme inhibitors (ACEis)/angiotensin-receptor blockers (ARBs)",
+      "long-acting dihydropyridine calcium channel blockers"
+    ]
+  },
+  {
+    "id": "htn_Q3",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "What is the blood pressure target for patients with hypertension who have no other conditions?",
+    "evidence": [
+      "in all patients with hypertension without comorbidities"
+    ]
+  },
+  {
+    "id": "htn_Q4",
+    "source": "who_hypertension.pdf",
+    "type": "multi",
+    "question": "How often should patients with hypertension be followed up?",
+    "evidence": [
+      "monthly follow up after initiation or a change in antihypertensive medications until patients reach target",
+      "follow up every 3-6 months for patients whose blood pressure is under control"
+    ]
+  },
+  {
+    "id": "htn_Q5",
+    "source": "who_hypertension.pdf",
+    "type": "paraphrase",
+    "question": "Can nurses or pharmacists prescribe blood pressure medicine?",
+    "evidence": [
+      "can be provided by nonphysician professionals such as pharmacists and nurses",
+      "proper training, prescribing authority, specific management protocols and physician oversight"
+    ]
+  },
+  {
+    "id": "htn_Q6",
+    "source": "who_hypertension.pdf",
+    "type": "paraphrase",
+    "question": "Should treatment start with one drug or a combination of drugs in a single pill?",
+    "evidence": [
+      "preferably with a single-pill combination",
+      "to improve adherence and persistence"
+    ]
+  },
+  {
+    "id": "htn_Q7",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "Which tests should be done when starting drug treatment for hypertension?",
+    "evidence": [
+      "obtaining tests to screen for comorbidities and secondary hypertension",
+      "only when testing does not delay or impede starting treatment"
+    ]
+  },
+  {
+    "id": "htn_Q8",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "Is cardiovascular risk assessment recommended when starting hypertension treatment?",
+    "evidence": [
+      "cardiovascular disease risk assessment at or after the initiation of pharmacological treatment"
+    ]
+  },
+  {
+    "id": "htn_Q9",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "What systolic blood pressure goal applies to patients who already have cardiovascular disease?",
+    "evidence": [
+      "patients with hypertension and known cardiovascular disease"
+    ]
+  },
+  {
+    "id": "htn_Q10",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "Which patients does the WHO hypertension guideline apply to?",
+    "evidence": [
+      "adult, non-pregnant patients who were appropriately diagnosed with hypertension"
+    ]
+  },
+  {
+    "id": "htn_Q11",
+    "source": "who_hypertension.pdf",
+    "type": "fact",
+    "question": "How many people worldwide have high blood pressure and how many have it under control?",
+    "evidence": [
+      "An estimated 1.4 billion people worldwide have high blood pressure",
+      "just 14% have it under control"
+    ]
+  },
+  {
+    "id": "htn_Q12",
+    "source": "who_hypertension.pdf",
+    "type": "paraphrase",
+    "question": "Should someone who already has heart disease be treated if their systolic pressure is only mildly raised?",
+    "evidence": [
+      "individuals with existing cardiovascular disease and systolic blood pressure of 130-139 mmHg"
+    ]
+  },
+  {
+    "id": "htn_Q13",
+    "source": "who_hypertension.pdf",
+    "type": "multi",
+    "question": "Which high-risk groups are suggested for treatment at a systolic pressure of 130 to 139 mmHg?",
+    "evidence": [
+      "without cardiovascular disease but with high cardiovascular risk, diabetes mellitus, or chronic kidney disease"
+    ]
+  },
+  {
+    "id": "chol_Q1",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "What causes cholera?",
+    "evidence": [
+      "diarrheal disease caused by infection of the intestine with the gram-negative bacteria Vibrio cholerae"
+    ]
+  },
+  {
+    "id": "chol_Q2",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "How is cholera transmitted?",
+    "evidence": [
+      "Cholera is transmitted through the fecal-oral route",
+      "A dose of more than one million organisms is usually needed to cause illness"
+    ]
+  },
+  {
+    "id": "chol_Q3",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "How long is the incubation period of cholera?",
+    "evidence": [
+      "The incubation period is usually 2 hours to 5 days"
+    ]
+  },
+  {
+    "id": "chol_Q4",
+    "source": "who_cholera.pdf",
+    "type": "paraphrase",
+    "question": "Does cholera cause bloody diarrhoea?",
+    "evidence": [
+      "Presence of blood in stool is not a characteristic of cholera"
+    ]
+  },
+  {
+    "id": "chol_Q5",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "What is the standard case definition of a suspected cholera case where no outbreak has been confirmed?",
+    "evidence": [
+      "Any person aged two years and older presenting with effortless acute watery diarrhoea and severe dehydration"
+    ]
+  },
+  {
+    "id": "chol_Q6",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "What triggers the alert threshold for cholera?",
+    "evidence": [
+      "An alert threshold is if a single case is suspected"
+    ]
+  },
+  {
+    "id": "chol_Q7",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "What triggers the action threshold for cholera?",
+    "evidence": [
+      "An Action threshold is if a suspected case is confirmed by a laboratory test"
+    ]
+  },
+  {
+    "id": "chol_Q8",
+    "source": "who_cholera.pdf",
+    "type": "paraphrase",
+    "question": "How many confirmed cases are needed before an outbreak can be declared?",
+    "evidence": [
+      "One Confirmed case is sufficient to declare an outbreak"
+    ]
+  },
+  {
+    "id": "chol_Q9",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "Can rapid diagnostic tests be used to confirm cholera?",
+    "evidence": [
+      "are used as a tool for screening suspected cases but not for confirmation",
+      "Cholera RDT results cannot be used for declaring an outbreak"
+    ]
+  },
+  {
+    "id": "chol_Q10",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "Which intravenous fluid is preferred for rehydrating cholera patients, and which should not be used?",
+    "evidence": [
+      "The fluid of choice for rehydration is Ringer lactate (RL)",
+      "IV fluid containing only glucose (e.g., 5% dextrose) should not be used"
+    ]
+  },
+  {
+    "id": "chol_Q11",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "What is the recommended antibiotic for children and pregnant women with cholera?",
+    "evidence": [
+      "WHO recommends doxycycline to children and pregnant women as a single dose"
+    ]
+  },
+  {
+    "id": "chol_Q12",
+    "source": "who_cholera.pdf",
+    "type": "paraphrase",
+    "question": "Which medicines should not be given to cholera patients?",
+    "evidence": [
+      "Antispasmodics, antidiarrheals, antiemetics, and plasma expanders are not indicated in the treatment of cholera"
+    ]
+  },
+  {
+    "id": "chol_Q13",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "Should ReSoMal be used to rehydrate malnourished children with cholera?",
+    "evidence": [
+      "sodium content is not sufficient to replace that lost in cholera"
+    ]
+  },
+  {
+    "id": "chol_Q14",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "When can a cholera patient be discharged from the treatment facility?",
+    "evidence": [
+      "Has no watery stools for 4 hours",
+      "Can walk without assistance",
+      "Is passing urine"
+    ]
+  },
+  {
+    "id": "chol_Q15",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "What is the difference between a cholera treatment centre and a cholera treatment unit?",
+    "evidence": [
+      "A CTC is an autonomous inpatient facility",
+      "A CTU is a simpler facility than a CTC in terms of installations"
+    ]
+  },
+  {
+    "id": "chol_Q16",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "How much water per person is needed during a cholera outbreak?",
+    "evidence": [
+      "Water needs are much higher during an outbreak situation",
+      "60 liters per person per day"
+    ]
+  },
+  {
+    "id": "chol_Q17",
+    "source": "who_cholera.pdf",
+    "type": "fact",
+    "question": "How soon should people who died of cholera be buried?",
+    "evidence": [
+      "burial should take place as quickly as possible preferably within 24 hours"
+    ]
+  },
+  {
+    "id": "chol_Q18",
+    "source": "who_cholera.pdf",
+    "type": "multi",
+    "question": "How long does protection from the oral cholera vaccine last after one or two doses?",
+    "evidence": [
+      "1 dose provides protection for 6 months",
+      "2 doses provide protection for at least 3 years"
+    ]
+  },
+  {
+    "id": "chol_Q19",
+    "source": "who_cholera.pdf",
+    "type": "paraphrase",
+    "question": "What case fatality rate shows a cholera treatment centre is well run?",
+    "evidence": [
+      "a treatment center with a CFR of less than 1% is considered to be well-run"
+    ]
+  },
+  {
+    "id": "chol_Q20",
+    "source": "who_cholera.pdf",
+    "type": "paraphrase",
+    "question": "How deadly is untreated severe dehydration from cholera?",
+    "evidence": [
+      "Cholera CFR can reach 50% if adequate treatment is not provided for patients with severe dehydration"
+    ]
+  }
+]
