@@ -1,5 +1,7 @@
 jupyterlab
 ipykernel
+ipywidgets
+tqdm
 
 pymupdf
 python-docx
@@ -8,6 +10,7 @@ pandas
 numpy
 matplotlib
 
+langchain-core
 langchain
 langchain-text-splitters
 langchain-huggingface
