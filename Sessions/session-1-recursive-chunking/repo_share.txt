@@ -1,5 +1,5 @@
 git clone --filter=blob:none --sparse https://github.com/Timothious-arhamsoft/DailyTask.git
-git checkout dev
 cd DailyTask
+git checkout dev
 git sparse-checkout set Sessions/session-1-recursive-chunking
 dir
